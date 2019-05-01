@@ -1,5 +1,5 @@
-name = Mukurtu
-description = The default theme for Mukurtu.
+name = Genoa Mukurtu Theme
+description = A clone of the Mukurtu theme with changes for Genoa
 core = 7.x
 base theme = bootstrap
 
