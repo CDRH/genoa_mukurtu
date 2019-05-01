@@ -6,12 +6,12 @@
  */
 ?>
 
-<?php  if (isset($mukurtu_tabbed_local_tasks[$nid]) && !empty($mukurtu_tabbed_local_tasks[$nid])): ?>
+<?php  if (isset($genoa_mukurtu_tabbed_local_tasks[$nid]) && !empty($genoa_mukurtu_tabbed_local_tasks[$nid])): ?>
 <div class="btn-group">
 <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Item Menu <span class="caret"></span></button>
 <h2 class="element-invisible">Primary tabs</h2>
 <ul class="dropdown-menu tabs--primary nav nav-tabs">
-<?php print render($mukurtu_tabbed_local_tasks[$nid]);?>
+<?php print render($genoa_mukurtu_tabbed_local_tasks[$nid]);?>
 </ul>
 </div>
 <?php endif; ?>
