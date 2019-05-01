@@ -5,14 +5,14 @@
  */
 function genoa_mukurtu_form_system_theme_settings_alter(&$form, $form_state, $form_id = NULL) {
   // Mukurtu.
-  $form['mukurtu'] = array(
+  $form['genoa_mukurtu'] = array(
     '#type' => 'fieldset',
-    '#title' => t('Mukurtu'),
-    //'#group' => 'mukurtu',
+    '#title' => t('genoa_mukurtu'),
+    //'#group' => 'genoa_mukurtu',
   );
 
   //// Color Scheme
-  $form['mukurtu']['colors'] = array(
+  $form['genoa_mukurtu']['colors'] = array(
     '#type' => 'fieldset',
     '#title' => t('Color Scheme'),
     '#collapsible' => TRUE,
@@ -20,16 +20,16 @@ function genoa_mukurtu_form_system_theme_settings_alter(&$form, $form_state, $fo
   );
 
   // Pick color scheme
-  $form['mukurtu']['colors']['genoa_mukurtu_theme_color_scheme'] = array(
+  $form['genoa_mukurtu']['colors']['genoa_mukurtu_theme_color_scheme'] = array(
     '#type' => 'radios',
     '#title' => t('Select default color scheme for the Mukurtu theme'),
-    '#default_value' => theme_get_setting('genoa_mukurtu_theme_color_scheme', 'mukurtu'),
+    '#default_value' => theme_get_setting('genoa_mukurtu_theme_color_scheme', 'genoa_mukurtu'),
     '#options' => array('blue-gold' => 'Blue & Gold', 'red-bone' => 'Red & Bone')
   );
 
   //// Default Images
   /*
-  $form['mukurtu']['images'] = array(
+  $form['genoa_mukurtu']['images'] = array(
     '#type' => 'fieldset',
     '#title' => t('Default Images'),
     '#collapsible' => TRUE,
@@ -37,7 +37,7 @@ function genoa_mukurtu_form_system_theme_settings_alter(&$form, $form_state, $fo
   );
 
   // Default audio thumbnail
-  $form['mukurtu']['images']['genoa_mukurtu_theme_default_audio_image'] = array(
+  $form['genoa_mukurtu']['images']['genoa_mukurtu_theme_default_audio_image'] = array(
     '#title' => t('Default Audio Thumbnail'),
     '#type' => 'managed_file',
     '#description' => t('The image to be used when an audio atom does not have a thumbnail.'),
@@ -47,7 +47,7 @@ function genoa_mukurtu_form_system_theme_settings_alter(&$form, $form_state, $fo
   */
 
   //// Footer.
-  $form['mukurtu']['footer'] = array(
+  $form['genoa_mukurtu']['footer'] = array(
     '#type' => 'fieldset',
     '#title' => t('Footer'),
     '#collapsible' => TRUE,
@@ -55,53 +55,53 @@ function genoa_mukurtu_form_system_theme_settings_alter(&$form, $form_state, $fo
   );
 
   // Email us text.
-  $form['mukurtu']['footer']['genoa_mukurtu_theme_email_us_message'] = array(
+  $form['genoa_mukurtu']['footer']['genoa_mukurtu_theme_email_us_message'] = array(
     '#type' => 'textfield',
     '#title' => t('Email us text'),
-    '#default_value' => theme_get_setting('genoa_mukurtu_theme_email_us_message', 'mukurtu'),
+    '#default_value' => theme_get_setting('genoa_mukurtu_theme_email_us_message', 'genoa_mukurtu'),
     '#description'   => t("Leave empty to omit from display."),
   );
 
   // Contact email.
-  $form['mukurtu']['footer']['genoa_mukurtu_theme_contact_email'] = array(
+  $form['genoa_mukurtu']['footer']['genoa_mukurtu_theme_contact_email'] = array(
     '#type' => 'textfield',
     '#title' => t('Contact email address'),
-    '#default_value' => theme_get_setting('genoa_mukurtu_theme_contact_email', 'mukurtu'),
+    '#default_value' => theme_get_setting('genoa_mukurtu_theme_contact_email', 'genoa_mukurtu'),
     '#description'   => t("Leave empty to omit from display."),
   );
 
   // Twitter.
-  $form['mukurtu']['footer']['genoa_mukurtu_theme_twitter_message'] = array(
+  $form['genoa_mukurtu']['footer']['genoa_mukurtu_theme_twitter_message'] = array(
     '#type' => 'textfield',
     '#title' => t('Twitter message text'),
-    '#default_value' => theme_get_setting('genoa_mukurtu_theme_twitter_message', 'mukurtu'),
+    '#default_value' => theme_get_setting('genoa_mukurtu_theme_twitter_message', 'genoa_mukurtu'),
     '#description'   => t("Leave empty to omit from display."),
   );
 
-  $form['mukurtu']['footer']['genoa_mukurtu_theme_twitter1'] = array(
+  $form['genoa_mukurtu']['footer']['genoa_mukurtu_theme_twitter1'] = array(
     '#type' => 'textfield',
     '#title' => t('First Twitter account'),
-    '#default_value' => theme_get_setting('genoa_mukurtu_theme_twitter1', 'mukurtu'),
+    '#default_value' => theme_get_setting('genoa_mukurtu_theme_twitter1', 'genoa_mukurtu'),
     '#description'   => t("Leave empty to omit from display."),
   );
 
-  $form['mukurtu']['footer']['genoa_mukurtu_theme_twitter2'] = array(
+  $form['genoa_mukurtu']['footer']['genoa_mukurtu_theme_twitter2'] = array(
     '#type' => 'textfield',
     '#title' => t('Second Twitter account'),
-    '#default_value' => theme_get_setting('genoa_mukurtu_theme_twitter2', 'mukurtu'),
+    '#default_value' => theme_get_setting('genoa_mukurtu_theme_twitter2', 'genoa_mukurtu'),
     '#description'   => t("Leave empty to omit from display."),
   );
 
   // Copyright message.
-  $form['mukurtu']['footer']['genoa_mukurtu_theme_copyright'] = array(
+  $form['genoa_mukurtu']['footer']['genoa_mukurtu_theme_copyright'] = array(
     '#type' => 'textfield',
     '#title' => t('Footer Copyright Message'),
-    '#default_value' => theme_get_setting('genoa_mukurtu_theme_copyright', 'mukurtu'),
+    '#default_value' => theme_get_setting('genoa_mukurtu_theme_copyright', 'genoa_mukurtu'),
     '#description'   => t("Use replacement token [year] for the current year."),
   );
 
   //// Frontpage
-    $form['mukurtu']['frontpage'] = array(
+    $form['genoa_mukurtu']['frontpage'] = array(
     '#type' => 'fieldset',
     '#title' => t('Frontpage'),
     '#collapsible' => TRUE,
@@ -109,16 +109,16 @@ function genoa_mukurtu_form_system_theme_settings_alter(&$form, $form_state, $fo
   );
 
   // Frontpage Layout
-  $form['mukurtu']['frontpage']['genoa_mukurtu_theme_frontpage_layout'] = array(
+  $form['genoa_mukurtu']['frontpage']['genoa_mukurtu_theme_frontpage_layout'] = array(
     '#type' => 'radios',
     '#title' => t('Frontpage Layout'),
-    '#default_value' => theme_get_setting('genoa_mukurtu_theme_frontpage_layout', 'mukurtu'),
+    '#default_value' => theme_get_setting('genoa_mukurtu_theme_frontpage_layout', 'genoa_mukurtu'),
     '#options' => array('large-hero' => 'Large hero image', 'side-by-side' => 'Smaller hero image with welcome message')
   );
 
   // Hero Image
   /*
-  $form['mukurtu']['frontpage']['genoa_mukurtu_theme_frontpage_hero_image'] = array(
+  $form['genoa_mukurtu']['frontpage']['genoa_mukurtu_theme_frontpage_hero_image'] = array(
     '#title' => t('Hero Image'),
     '#type' => 'managed_file',
     '#description' => t(''),

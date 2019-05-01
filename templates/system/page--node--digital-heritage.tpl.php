@@ -227,7 +227,7 @@ $pages = $first_page->field_book_children[LANGUAGE_NONE];
         print "</a></div>";
         $options[$dh_page] = $child_node->title;
     }
-    drupal_add_js(array('mukurtu' => array('dh_multipage_initial_slide' => $initial_slide)), 'setting');
+    drupal_add_js(array('genoa_mukurtu' => array('dh_multipage_initial_slide' => $initial_slide)), 'setting');
     $initial_slide++;
     $dh_page++;
   ?>

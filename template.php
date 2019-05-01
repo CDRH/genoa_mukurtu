@@ -23,7 +23,7 @@ function genoa_mukurtu_include_slick_carousel() {
     drupal_add_css($css);
     $js = join('/', array($slick, 'slick.min.js'));
     drupal_add_js($js);
-    $js = join('/', array(drupal_get_path('theme', 'mukurtu'), 'js', 'mukurtu-slick-carousel.js'));
+    $js = join('/', array(drupal_get_path('theme', 'genoa_mukurtu'), 'js', 'mukurtu-slick-carousel.js'));
     drupal_add_js($js);
 }
 
@@ -31,7 +31,7 @@ function genoa_mukurtu_preprocess_page(&$vars, $hook = null){
     if (isset($vars['node'])) {
         switch ($vars['node']->type) {
         case 'collection':
-            $js = join('/', array(drupal_get_path('theme', 'mukurtu'), 'js', 'collection-grid.js'));
+            $js = join('/', array(drupal_get_path('theme', 'genoa_mukurtu'), 'js', 'collection-grid.js'));
             drupal_add_js($js);
             break;
         case 'digital_heritage':
@@ -84,7 +84,7 @@ function genoa_mukurtu_preprocess_field(&$variables, $hook) {
 function genoa_mukurtu_block_view_alter(&$data, $block) {
     // Rather than mess with block display, we configure all pre-packaged frontpage
     // blocks to display and hide the ones not selected in the theme settings.
-    $frontpage_hero_setting = theme_get_setting('genoa_mukurtu_theme_frontpage_layout', 'mukurtu');
+    $frontpage_hero_setting = theme_get_setting('genoa_mukurtu_theme_frontpage_layout', 'genoa_mukurtu');
 
     if(isset($block->bid)) {
         switch($block->bid) {
