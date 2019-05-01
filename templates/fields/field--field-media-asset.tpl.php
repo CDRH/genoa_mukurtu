@@ -93,7 +93,7 @@
              $sid = $element['#object']->field_media_asset[LANGUAGE_NONE][$delta]['sid'];
 //             $atom = scald_atom_load($sid);
 //dpm($atom);
-             $rendered_thumnail = scald_render($sid, 'genoa_mukurtu_carousel_thumbnail');
+             $rendered_thumnail = scald_render($sid, 'mukurtu_carousel_thumbnail');
              if($rendered_thumnail) {
                  print $rendered_thumnail;
              }

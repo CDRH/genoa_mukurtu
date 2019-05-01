@@ -203,7 +203,7 @@ $pages = $first_page->field_book_children[LANGUAGE_NONE];
         print "<div class=\"$classes\"><span class=\"mukurtu-loader\"></span>";
         $url = url(drupal_get_path_alias('node/' . $first_page->nid));
         print "<a href='$url'>";
-        print scald_render($sid, 'genoa_mukurtu_multi_page_carousel');
+        print scald_render($sid, 'mukurtu_multi_page_carousel');
         print "</a></div>";
         $options[$dh_page] = $first_page->title;
     }
@@ -223,11 +223,11 @@ $pages = $first_page->field_book_children[LANGUAGE_NONE];
         print "<div class=\"$classes\"><span class=\"mukurtu-loader\"></span>";
         $url = url(drupal_get_path_alias('node/' . $child_node->nid));
         print "<a href='$url'>";
-        print scald_render($sid, 'genoa_mukurtu_multi_page_carousel');
+        print scald_render($sid, 'mukurtu_multi_page_carousel');
         print "</a></div>";
         $options[$dh_page] = $child_node->title;
     }
-    drupal_add_js(array('genoa_mukurtu' => array('dh_multipage_initial_slide' => $initial_slide)), 'setting');
+    drupal_add_js(array('mukurtu' => array('dh_multipage_initial_slide' => $initial_slide)), 'setting');
     $initial_slide++;
     $dh_page++;
   ?>
