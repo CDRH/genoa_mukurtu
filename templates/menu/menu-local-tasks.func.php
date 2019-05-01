@@ -21,7 +21,7 @@
  *
  * @ingroup theme_functions
  */
-function mukurtu_menu_local_tasks(array &$variables) {
+function genoa_mukurtu_menu_local_tasks(array &$variables) {
   $output = '';
 
   if (!empty($variables['primary'])) {
