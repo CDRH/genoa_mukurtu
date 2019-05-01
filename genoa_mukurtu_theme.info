@@ -37,15 +37,15 @@ settings[bootstrap_forms_smart_descriptions] = 1
 settings[bootstrap_forms_smart_descriptions_limit] = 1000
 settings[bootstrap_forms_smart_descriptions_allowed_tags] = 'b, br, code, em, i, kbd, span, strong'
 settings[bootstrap_tooltip_placement] => auto bottom
-settings[mukurtu_theme_color_scheme] = 'blue-gold'
-settings[mukurtu_theme_email_us_message] = 'Email us at'
-settings[mukurtu_theme_contact_email] = 'support@mukurtu.org'
-settings[mukurtu_theme_twitter_message] = 'Follow us'
-settings[mukurtu_theme_twitter1] = 'mukurtu'
-settings[mukurtu_theme_twitter2] = 'mukurtusupport'
-settings[mukurtu_theme_copyright] = '© [year] Mukurtu CMS'
-settings[mukurtu_theme_frontpage_layout] = 'large-hero'
-settings[mukurtu_theme_frontpage_hero_image] = ''
+settings[genoa_mukurtu_theme_color_scheme] = 'blue-gold'
+settings[genoa_mukurtu_theme_email_us_message] = 'Email us at'
+settings[genoa_mukurtu_theme_contact_email] = 'support@mukurtu.org'
+settings[genoa_mukurtu_theme_twitter_message] = 'Follow us'
+settings[genoa_mukurtu_theme_twitter1] = 'mukurtu'
+settings[genoa_mukurtu_theme_twitter2] = 'mukurtusupport'
+settings[genoa_mukurtu_theme_copyright] = '© [year] Mukurtu CMS'
+settings[genoa_mukurtu_theme_frontpage_layout] = 'large-hero'
+settings[genoa_mukurtu_theme_frontpage_hero_image] = ''
 
 ; For information on choosing the desired method, please read the Drupal
 ; Bootstrap sub-theme "how-to" documentation:
