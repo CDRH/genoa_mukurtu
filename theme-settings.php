@@ -24,7 +24,7 @@ function mukurtu_subtheme_form_system_theme_settings_alter(&$form, $form_state, 
     '#type' => 'radios',
     '#title' => t('Select default color scheme for the Mukurtu theme'),
     '#default_value' => theme_get_setting('mukurtu_subtheme_theme_color_scheme', 'mukurtu_subtheme'),
-    '#options' => array('blue-gold' => 'Blue & Gold', 'red-bone' => 'Red & Bone')
+    '#options' => array('blue-gold' => 'Blue & Gold', 'red-bone' => 'Red & Bone', 'neutral' => 'Neutral')
   );
 
   //// Default Images

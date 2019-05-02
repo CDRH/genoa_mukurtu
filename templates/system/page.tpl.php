@@ -177,6 +177,15 @@
   </div>
 </div>
 
+<?php
+// TODO: This footer info should go somewhere - a drupal block or something
+?>
+
+<div class="container" style="padding: 1em 0;">
+  <hr/>
+  <p><em>The Genoa Indian School Digital Reconciliation Project is a collaboration between the University of Nebraska-Lincoln; the Genoa U.S. Indian School Foundation; Community Advisors from the Ponca, Omaha, Winnebago, and Santee Sioux tribes of Nebraska; and descendants of those who attended Genoa. For additional information or other project-related inquiries, <a href="mailto:genoadigitalproject@unl.edu?subject=Inquiry%20about%20Genoa%20Digital%20Project">contact us</a>.</em></p>
+</div>
+
 <?php if (!empty($page['footer'])): ?>
   <footer class="footer <?php print $container_class; ?>">
     <?php print render($page['footer']); ?>
