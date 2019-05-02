@@ -1,3 +1,5 @@
+The folder for this theme must be `mukurtu_subtheme`
+
 <!-- @file Instructions for subtheming using the Less Starterkit. -->
 <!-- @defgroup subtheme_less -->
 <!-- @ingroup subtheme -->
