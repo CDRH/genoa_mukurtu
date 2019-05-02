@@ -62,3 +62,12 @@ the same file name, using a different extension of course).
 [Bootstrap Framework]: https://getbootstrap.com/docs/3.3/
 [Bootstrap Framework Source Files]: https://github.com/twbs/bootstrap/releases
 [Less]: http://lesscss.org
+
+## Clearing Caches
+
+Some theme changes may require clearing the theme cache. Use the drush command: 
+
+```
+drush cc theme-registry
+```
+
