@@ -12368,3 +12368,9 @@ body #admin-menu {
 .user-profile .field-name-personal-collections .view-footer a {
   font-size: 20px;
 }
+
+/* Begin Karins changes */
+
+.page-header {
+  background: transparent;
+}
