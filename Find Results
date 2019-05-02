@@ -1,0 +1,150 @@
+Searching 437 files for "mukurtu'"
+
+/Users/kdalziel/Desktop/mukurtu_subtheme/mukurtu.info:
+   42  settings[mukurtu_subtheme_theme_contact_email] = 'support@mukurtu.org'
+   43  settings[mukurtu_subtheme_theme_twitter_message] = 'Follow us'
+   44: settings[mukurtu_subtheme_theme_twitter1] = 'mukurtu'
+   45  settings[mukurtu_subtheme_theme_twitter2] = 'mukurtusupport'
+   46  settings[mukurtu_subtheme_theme_copyright] = '© [year] Mukurtu CMS'
+
+/Users/kdalziel/Desktop/mukurtu_subtheme/template.php:
+   24      $js = join('/', array($slick, 'slick.min.js'));
+   25      drupal_add_js($js);
+   26:     $js = join('/', array(drupal_get_path('theme', 'mukurtu'), 'js', 'mukurtu-slick-carousel.js'));
+   27      drupal_add_js($js);
+   28  }
+   ..
+   32          switch ($vars['node']->type) {
+   33          case 'collection':
+   34:             $js = join('/', array(drupal_get_path('theme', 'mukurtu'), 'js', 'collection-grid.js'));
+   35              drupal_add_js($js);
+   36              break;
+   ..
+   85      // Rather than mess with block display, we configure all pre-packaged frontpage
+   86      // blocks to display and hide the ones not selected in the theme settings.
+   87:     $frontpage_hero_setting = theme_get_setting('mukurtu_subtheme_theme_frontpage_layout', 'mukurtu');
+   88  
+   89      if(isset($block->bid)) {
+
+/Users/kdalziel/Desktop/mukurtu_subtheme/theme-settings.php:
+    6  function mukurtu_subtheme_form_system_theme_settings_alter(&$form, $form_state, $form_id = NULL) {
+    7    // Mukurtu.
+    8:   $form['mukurtu'] = array(
+    9      '#type' => 'fieldset',
+   10:     '#title' => t('Mukurtu'),
+   11:     //'#group' => 'mukurtu',
+   12    );
+   13  
+   14    //// Color Scheme
+   15:   $form['mukurtu']['colors'] = array(
+   16      '#type' => 'fieldset',
+   17      '#title' => t('Color Scheme'),
+   ..
+   21  
+   22    // Pick color scheme
+   23:   $form['mukurtu']['colors']['mukurtu_subtheme_theme_color_scheme'] = array(
+   24      '#type' => 'radios',
+   25      '#title' => t('Select default color scheme for the Mukurtu theme'),
+   26:     '#default_value' => theme_get_setting('mukurtu_subtheme_theme_color_scheme', 'mukurtu'),
+   27      '#options' => array('blue-gold' => 'Blue & Gold', 'red-bone' => 'Red & Bone')
+   28    );
+   ..
+   30    //// Default Images
+   31    /*
+   32:   $form['mukurtu']['images'] = array(
+   33      '#type' => 'fieldset',
+   34      '#title' => t('Default Images'),
+   ..
+   38  
+   39    // Default audio thumbnail
+   40:   $form['mukurtu']['images']['mukurtu_subtheme_theme_default_audio_image'] = array(
+   41      '#title' => t('Default Audio Thumbnail'),
+   42      '#type' => 'managed_file',
+   ..
+   48  
+   49    //// Footer.
+   50:   $form['mukurtu']['footer'] = array(
+   51      '#type' => 'fieldset',
+   52      '#title' => t('Footer'),
+   ..
+   56  
+   57    // Email us text.
+   58:   $form['mukurtu']['footer']['mukurtu_subtheme_theme_email_us_message'] = array(
+   59      '#type' => 'textfield',
+   60      '#title' => t('Email us text'),
+   61:     '#default_value' => theme_get_setting('mukurtu_subtheme_theme_email_us_message', 'mukurtu'),
+   62      '#description'   => t("Leave empty to omit from display."),
+   63    );
+   64  
+   65    // Contact email.
+   66:   $form['mukurtu']['footer']['mukurtu_subtheme_theme_contact_email'] = array(
+   67      '#type' => 'textfield',
+   68      '#title' => t('Contact email address'),
+   69:     '#default_value' => theme_get_setting('mukurtu_subtheme_theme_contact_email', 'mukurtu'),
+   70      '#description'   => t("Leave empty to omit from display."),
+   71    );
+   72  
+   73    // Twitter.
+   74:   $form['mukurtu']['footer']['mukurtu_subtheme_theme_twitter_message'] = array(
+   75      '#type' => 'textfield',
+   76      '#title' => t('Twitter message text'),
+   77:     '#default_value' => theme_get_setting('mukurtu_subtheme_theme_twitter_message', 'mukurtu'),
+   78      '#description'   => t("Leave empty to omit from display."),
+   79    );
+   80  
+   81:   $form['mukurtu']['footer']['mukurtu_subtheme_theme_twitter1'] = array(
+   82      '#type' => 'textfield',
+   83      '#title' => t('First Twitter account'),
+   84:     '#default_value' => theme_get_setting('mukurtu_subtheme_theme_twitter1', 'mukurtu'),
+   85      '#description'   => t("Leave empty to omit from display."),
+   86    );
+   87  
+   88:   $form['mukurtu']['footer']['mukurtu_subtheme_theme_twitter2'] = array(
+   89      '#type' => 'textfield',
+   90      '#title' => t('Second Twitter account'),
+   91:     '#default_value' => theme_get_setting('mukurtu_subtheme_theme_twitter2', 'mukurtu'),
+   92      '#description'   => t("Leave empty to omit from display."),
+   93    );
+   94  
+   95    // Copyright message.
+   96:   $form['mukurtu']['footer']['mukurtu_subtheme_theme_copyright'] = array(
+   97      '#type' => 'textfield',
+   98      '#title' => t('Footer Copyright Message'),
+   99:     '#default_value' => theme_get_setting('mukurtu_subtheme_theme_copyright', 'mukurtu'),
+  100      '#description'   => t("Use replacement token [year] for the current year."),
+  101    );
+  102  
+  103    //// Frontpage
+  104:     $form['mukurtu']['frontpage'] = array(
+  105      '#type' => 'fieldset',
+  106      '#title' => t('Frontpage'),
+  ...
+  110  
+  111    // Frontpage Layout
+  112:   $form['mukurtu']['frontpage']['mukurtu_subtheme_theme_frontpage_layout'] = array(
+  113      '#type' => 'radios',
+  114      '#title' => t('Frontpage Layout'),
+  115:     '#default_value' => theme_get_setting('mukurtu_subtheme_theme_frontpage_layout', 'mukurtu'),
+  116      '#options' => array('large-hero' => 'Large hero image', 'side-by-side' => 'Smaller hero image with welcome message')
+  117    );
+  ...
+  119    // Hero Image
+  120    /*
+  121:   $form['mukurtu']['frontpage']['mukurtu_subtheme_theme_frontpage_hero_image'] = array(
+  122      '#title' => t('Hero Image'),
+  123      '#type' => 'managed_file',
+
+/Users/kdalziel/Desktop/mukurtu_subtheme/less/mukurtu-common-style.less:
+    1  // Mukurtu Specific
+    2: @import 'mukurtu';
+    3  @import 'mukurtu-mixins';
+    4  @import 'mukurtu-footer';
+
+/Users/kdalziel/Desktop/mukurtu_subtheme/templates/system/page--node--digital-heritage.tpl.php:
+  228          $options[$dh_page] = $child_node->title;
+  229      }
+  230:     drupal_add_js(array('mukurtu' => array('dh_multipage_initial_slide' => $initial_slide)), 'setting');
+  231      $initial_slide++;
+  232      $dh_page++;
+
+31 matches across 5 files

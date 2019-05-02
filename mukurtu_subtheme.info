@@ -1,7 +1,7 @@
-name = Genoa Mukurtu Theme
-description = A clone of the Mukurtu theme with changes for Genoa
+name = Mukurtu Subtheme
+description = the subtheme
 core = 7.x
-base theme = bootstrap
+base theme = mukurtu
 
 
 ;;;;;;;;;;;;;;;;;;;;;
@@ -27,6 +27,7 @@ regions[page_bottom]    = 'Page bottom'
 ;stylesheets[all][] = css/style.css
 ;stylesheets[all][] = css/style-blue-gold.css
 stylesheets[all][] = font-awesome/css/font-awesome.min.css
+stylesheets[all][] = css/style_extra.css
 
 
 ;;;;;;;;;;;;;;;;;;;;;
@@ -37,15 +38,15 @@ settings[bootstrap_forms_smart_descriptions] = 1
 settings[bootstrap_forms_smart_descriptions_limit] = 1000
 settings[bootstrap_forms_smart_descriptions_allowed_tags] = 'b, br, code, em, i, kbd, span, strong'
 settings[bootstrap_tooltip_placement] => auto bottom
-settings[genoa_mukurtu_theme_color_scheme] = 'blue-gold'
-settings[genoa_mukurtu_theme_email_us_message] = 'Email us at'
-settings[genoa_mukurtu_theme_contact_email] = 'support@mukurtu.org'
-settings[genoa_mukurtu_theme_twitter_message] = 'Follow us'
-settings[genoa_mukurtu_theme_twitter1] = 'genoa_mukurtu'
-settings[genoa_mukurtu_theme_twitter2] = 'mukurtusupport'
-settings[genoa_mukurtu_theme_copyright] = '© [year] Mukurtu CMS'
-settings[genoa_mukurtu_theme_frontpage_layout] = 'large-hero'
-settings[genoa_mukurtu_theme_frontpage_hero_image] = ''
+settings[mukurtu_subtheme_theme_color_scheme] = 'blue-gold'
+settings[mukurtu_subtheme_theme_email_us_message] = 'Email us at'
+settings[mukurtu_subtheme_theme_contact_email] = 'support@mukurtu.org'
+settings[mukurtu_subtheme_theme_twitter_message] = 'Follow us'
+settings[mukurtu_subtheme_theme_twitter1] = 'mukurtu_subtheme'
+settings[mukurtu_subtheme_theme_twitter2] = 'mukurtusupport'
+settings[mukurtu_subtheme_theme_copyright] = '© [year] Mukurtu CMS'
+settings[mukurtu_subtheme_theme_frontpage_layout] = 'large-hero'
+settings[mukurtu_subtheme_theme_frontpage_hero_image] = ''
 
 ; For information on choosing the desired method, please read the Drupal
 ; Bootstrap sub-theme "how-to" documentation:
