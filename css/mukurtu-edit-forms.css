@@ -1,0 +1,15 @@
+#edit-field-pre-actions {
+  padding-top: 50px;
+}
+.page-node-add .table-responsive,
+.page-node-edit .table-responsive {
+  overflow: visible;
+}
+.page-node-add.node-type-collection .field-name-field-digital-heritage-items,
+.page-node-edit.node-type-collection .field-name-field-digital-heritage-items {
+  height: auto !important;
+}
+.page-node-add #edit-oggroup-fieldset-body .form-item .input-group,
+.page-node-edit #edit-oggroup-fieldset-body .form-item .input-group {
+  display: none;
+}
