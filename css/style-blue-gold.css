@@ -12366,7 +12366,16 @@ body #admin-menu {
 .user-profile .field-name-personal-collections .view-footer a {
   font-size: 20px;
 }
+
 /* Begin Karins changes */
 .page-header {
   background: transparent;
+}
+
+@media (min-width: 768px) {
+  .node-type-digital-heritage h1.page-header {
+    text-overflow: ellipsis;
+    white-space: normal;
+    overflow: hidden;
+  }
 }
