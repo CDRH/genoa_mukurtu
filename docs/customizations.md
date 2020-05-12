@@ -150,8 +150,10 @@ with the following field settings:
   - Click gear to right to set label, click Update
 - Summary
 - Tribe(s) (renamed from Tribal Affiliation)
+  - Label: Inline
+  - Format: Separated
+  - Click gear to right, check the box to hide label colon, rename, click Update
 - People
-  - Display: Right
   - Label: Inline
   - Format: Separated
   - Click gear to right, check the box to hide label colon, click Update
