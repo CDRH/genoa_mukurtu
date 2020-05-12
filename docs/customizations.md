@@ -158,10 +158,10 @@ with the following field settings:
 - Remove Community
   - Display: Disabled
 
-![search result display
-config](images/digital-heritage-search-result-display-config.png)
-
-![teaser display config](images/digital-heritage-teaser-display-config.png)
+Admin UI Screenshots:
+- [Search result display
+  config](images/digital-heritage-search-result-display-config.png)
+- [Teaser display config](images/digital-heritage-teaser-display-config.png)
 
 ## Digital Heritage Full Display
 Browse to Digital Heritage item on the Browse page and click to it
@@ -170,6 +170,10 @@ Click the Item Menu, then click Manage display
 
 Had to increase PHP config `max_input_vars` from 1000 for customizing "Category"
 display as "Topic". Set the value to 2048 and then the change succeeded
+
+Admin UI Screenshot:
+- [Full content display
+  config](images/digital-heritage-full-content-display-config.png)
 
 ## Add Site-wide Search
 **Under Construction**
