@@ -168,6 +168,26 @@ Browse to Digital Heritage item on the Browse page and click to it
 
 Click the Item Menu, then click Manage display
 
+Display customizations:
+- Information below item images:
+  - Summary
+  - Description
+  - Image Identifier (renamed from Identifier)
+  - Citation
+- Information in right-hand panel:
+  - Original Date
+  - Topic (renamed from Category)
+  - Tribe(s) (renamed from Tribal Affiliation)
+  - Keywords
+  - People
+  - Places (renamed from Location Description]
+  - Format
+  - Type
+- Disabled:
+  - Author
+  - Community
+  - Protocol
+
 Had to increase PHP config `max_input_vars` from 1000 for customizing "Category"
 display as "Topic". Set the value to 2048 and then the change succeeded
 
