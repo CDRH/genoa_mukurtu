@@ -13,6 +13,8 @@
   - [Add Facet Field to Page](#add-facet-field-to-page)
 - [Digital Heritage Preview Displays](#digital-heritage-preview-displays)
 - [Digital Heritage Full Display](#digital-heritage-full-display)
+- [Allowed HTML Elements](#allowed-html-elements)
+- [Add Customizable Footer](#add-customizable-footer)
 - [Add Site-wide Search](#add-site-wide-search)
 
 ## Account Registration
@@ -196,6 +198,30 @@ display as "Topic". Set the value to 2048 and then the change succeeded
 Admin UI Screenshot:
 - [Full content display
   config](images/digital-heritage-full-content-display-config.png)
+
+## Allowed HTML Elements
+The allowed HTML elements within user-written and imported content may be
+customized.
+
+Admin Menu > Configuration > Content authoring > Text formats
+
+Click "configure" to the right of "Filtered HTML" or "Full HTML"
+
+Scroll down to "Allowed HTML tags" and modify the space-separated list as
+desired.
+
+Click "Save configuration"
+
+## Add Customizable Footer
+Admin UI > Structure > Blocks
+
+Change "Custom site footer" to display in the Footer region
+
+Click "configure" to the right
+- Set the desired "Text format" to allow the HTML elements you'd like to use
+- Enter the content you'd like to display in the footer
+- Click "Advanced Settings" and enter any custom CSS classes you'd like applied
+- Click "Save block"
 
 ## Add Site-wide Search
 **Under Construction**
