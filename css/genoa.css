@@ -12387,3 +12387,8 @@ body #admin-menu {
 .not-logged-in .navbar-nav .last.leaf {
   display: none;
 }
+
+/* Hide Image Metadata button */
+.digital-heritage-body .group-480-thumbnail-and-link + div {
+  display: none;
+}
