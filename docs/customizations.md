@@ -15,6 +15,7 @@
 - [Digital Heritage Full Display](#digital-heritage-full-display)
 - [Allowed HTML Elements](#allowed-html-elements)
 - [Add Customizable Footer](#add-customizable-footer)
+- [Image Download Links](#image-download-links)
 - [Add Site-wide Search](#add-site-wide-search)
 
 ## Account Registration
@@ -222,6 +223,28 @@ Click "configure" to the right
 - Enter the content you'd like to display in the footer
 - Click "Advanced Settings" and enter any custom CSS classes you'd like applied
 - Click "Save block"
+
+## Image Download Links
+We are customizing the links below images to say "Download image" rather than
+"Access image" and adding the HTML5 attribute which signals to browsers to show
+their download prompt upon clicking the link.
+
+The code is buried deep within one of the Mukurtu features and modifying the
+file seems simpler than trying to override the feature.
+
+Edit
+`(path to site)/master/sites/all/modules/custom/features/ma_scald/ma_scald.module`
+:
+```php
+  // 'Download' was determined to be unpalatable, switching to 'Access'
+#  $download_link_text = 'Access' . ((empty($entity->type)) ? '' : ' ' . $entity->type);
+#  return l($download_link_text, file_create_url ($entity->file_source));
+# Customize with Download text and to show download prompt on click
+  $download_link_text = 'Download' . ((empty($entity->type)) ? '' : ' ' . $entity->type);
+  return l($download_link_text, file_create_url ($entity->file_source),
+           array('attributes' => array('download' => ''))
+  );
+```
 
 ## Add Site-wide Search
 **Under Construction**
