@@ -247,14 +247,31 @@ Edit
 ```
 
 ## Add Site-wide Search
-**Under Construction**
+Admin Menu > Structure > Blocks
 
-Admin Menu > Structure > Blocks is where one adds blocks to the theme's regions
+This is where one adds blocks to the theme's regions. The page lists blocks,
+views, exposed forms (from views), search facets, mini panels, etc.
 
-Blocks page lists blocks, views, exposed forms (from views), search facets,
-mini panels, etc
+Click "Demonstrate block regions (Genoa)" to see where each region will locate
+any blocks added to it.
 
-Tried making a mini panel to get around the Digital Heritage Browse page's
-exposed form's path always being the current page's, but no luck so far :-( Mini
-panel's context configuration /might/ lead to a solution.
+Scroll down to "Exposed form: digital_heritage_grid_list-all" and set its region
+to "Top Bar". Scroll up and drag it to be above "Mukurtu Dashboard: Getting
+Started Guide".
+
+Scroll down and click "Save blocks". Now close the admin UI.
+
+Mouse over the search form near the top of the page and click the gear in the
+upper right corner. Click "Edit view".
+
+Under "Pane Settings", click the link to the right of "Use panel path". Change
+the value to "No" and click "Apply".
+
+Click "Advanced" on the right to open more settings. Click the link to the right
+of "Link display". Click the radio next to "Custom URL" and enter
+"/digital-heritage" in the input. Click "Apply (all displays)".
+
+Click "Save".
+
+Searches should know work from anywhere on the site
 

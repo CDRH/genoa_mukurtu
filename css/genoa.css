@@ -12392,3 +12392,11 @@ body #admin-menu {
 .digital-heritage-body .group-480-thumbnail-and-link + div {
   display: none;
 }
+
+/* Hide site-wide search reset button on all but results page */
+.contextual-links-region .views-reset-button {
+  display: none;
+}
+.page-digital-heritage .contextual-links-region .views-reset-button {
+  display: block;
+}
