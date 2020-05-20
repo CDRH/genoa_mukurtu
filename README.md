@@ -16,3 +16,8 @@ This theme will **not** display correctly unless the settings are set properly.
 ## Further Customizations
 We've made numerous other customizations to Mukurtu's default configuration.
 Read more about them in the [Customizations document](docs/customizations.md)
+
+## Optimizations
+Read more about [Drupal and Mukurtu optimizations](docs/optimizations.md) to
+have the site perform the best for users.
+
