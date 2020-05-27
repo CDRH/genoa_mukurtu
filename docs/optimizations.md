@@ -10,6 +10,13 @@
 Packages for install have already been integrated into [Mukurtu install
 documentation](https://github.com/CDRH/CDRH-General/wiki/Mukurtu).
 
+View execution time and memory usage for each page load:<br>
+Admin Menu > Configuration > Development > Devel settings
+
+Check "Display page timer" and "Display memory usage"
+
+Click "Save configuration"
+
 ## Page Caching and CSS/JS Aggregation
 Admin Menu > Configuration > Development > Performance
 
