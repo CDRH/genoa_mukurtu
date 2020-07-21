@@ -12388,6 +12388,11 @@ body #admin-menu {
   display: none;
 }
 
+/* Hide Reset button in nav search */
+.not-logged-in .views-exposed-widgets .views-reset-button {
+  display: none;
+}
+
 /* Hide Image Metadata button */
 .digital-heritage-body .group-480-thumbnail-and-link + div {
   display: none;
