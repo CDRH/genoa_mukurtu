@@ -12380,11 +12380,16 @@ body #admin-menu {
   }
 }
 
-/* Greg's Browse menu item hiding */
+/* Hide Browse menu item when not logged in */
 .not-logged-in .navbar-nav .leaf:nth-child(4) {
   border-right: none !important;
 }
 .not-logged-in .navbar-nav .last.leaf {
+  display: none;
+}
+
+/* Hide nav search when not logged in */
+.not-logged-in .region-header .views-exposed-widgets {
   display: none;
 }
 
