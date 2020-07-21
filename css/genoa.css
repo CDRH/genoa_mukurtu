@@ -12394,7 +12394,7 @@ body #admin-menu {
 }
 
 /* Hide Reset button in nav search */
-.not-logged-in .views-exposed-widgets .views-reset-button {
+.region-header .views-exposed-widgets .views-reset-button {
   display: none;
 }
 
