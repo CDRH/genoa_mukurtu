@@ -1,5 +1,14 @@
 <?php
 
+// Replace the base theme's version of mukurtu-slick-carousel.js
+// hook_js_alter()
+function genoa_js_alter(&$javascript) {
+  if (isset($javascript['sites/all/themes/mukurtu/js/mukurtu-slick-carousel.js'])) {
+    $file = drupal_get_path('theme', 'genoa') . '/js/mukurtu-slick-carousel.js';
+    $javascript['sites/all/themes/mukurtu/js/mukurtu-slick-carousel.js'] = drupal_js_defaults($file);
+  }
+}
+
 ///**
 // * @file
 // * The primary PHP file for this theme.
