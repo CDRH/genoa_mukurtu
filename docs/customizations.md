@@ -69,6 +69,8 @@ Admin menu > Content > Comments.
   - Tribe (renamed from Tribal Affiliation)
   - Keywords
   - Format
+    - Add "Format" and "Format » Name" to index fields, re-index, and
+      facet by "Format", not "Format » Name"
   - Type
 
 ### Completely Disable Search Facets
