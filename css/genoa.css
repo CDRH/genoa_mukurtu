@@ -12458,13 +12458,14 @@ Genoa Theme Changes
 
 /* Search Box */
 
-#block-views-ee32d6a0eefea96d62828df6beda043f {
+#block-views-ee32d6a0eefea96d62828df6beda043f,
+header#page-header > .region-header > .block-views {
   display: flex;
   justify-content: center;
   text-align: center;
 }
 
-.views-exposed-widgets {
+header#page-header .views-exposed-widgets {
   align-items: center;
   display: flex;
   justify-content: center !important;
@@ -12473,11 +12474,11 @@ Genoa Theme Changes
   text-align: center;
 }
 
-.views-exposed-widgets input {
+header#page-header .views-exposed-widgets input {
   max-width: 30em;
 }
 
-.views-exposed-form .views-exposed-widget {
+header#page-header .views-exposed-form .views-exposed-widget {
   padding: 0;
 }
 
