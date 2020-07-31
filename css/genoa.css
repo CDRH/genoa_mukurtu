@@ -12465,7 +12465,7 @@ header#page-header > .region-header > .block-views {
   text-align: center;
 }
 
-header#page-header .views-exposed-widgets {
+.region-header .views-exposed-widgets {
   align-items: center;
   display: flex;
   justify-content: center !important;
@@ -12474,11 +12474,11 @@ header#page-header .views-exposed-widgets {
   text-align: center;
 }
 
-header#page-header .views-exposed-widgets input {
+.region-header .views-exposed-widgets input {
   max-width: 30em;
 }
 
-header#page-header .views-exposed-form .views-exposed-widget {
+.region-header .views-exposed-form .views-exposed-widget {
   padding: 0;
 }
 
