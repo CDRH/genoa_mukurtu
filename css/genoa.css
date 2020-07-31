@@ -12367,46 +12367,145 @@ body #admin-menu {
   font-size: 20px;
 }
 
-/* Begin Karins changes */
+
+
+
+/* ==================
+Genoa Theme Changes 
+==================== */
+
+/* Header Font */
+
+@import url('https://fonts.googleapis.com/css2?family=Proza+Libre:wght@500&display=swap');
+
 .page-header {
-  background: transparent;
+  font-family: 'Proza Libre', sans-serif;
 }
+
+/* Design and colors */
+
+/* Header/ blue stripes styling */
+
+.node-type-digital-heritage h1.page-header, 
+.footer,
+.page-header {
+  background-color: #1D7581; /* fallback */
+  background-image: url(../images/blue_stripes.png);
+  color: white;
+}
+
+.page-header { /* font set above */
+  background-repeat: repeat;
+  background-size: auto;
+  margin-bottom: 30px;
+  text-shadow: 0 0 .05em #124559, 0 .05em .05em #124559;
+}
+
+.navbar-default {
+  background-color: #eff6e0;
+}
+
+.page-node-1 {
+  background-color: #AEC3B0; /* fallback */
+  background-attachment: scroll;
+  background-image: linear-gradient(14deg, rgba(174,195,176,1) 0%, rgba(239,246,224,1) 100%); /* W3C */
+  background-position: center top; 
+  background-repeat: no-repeat;
+  background-size: 100vw auto, cover;
+}
+
+.footer, .page-header {
+  padding: 20px !important;
+}
+
+.footer {
+  text-align: center;
+}
+
+/* Home Design */
+
+.home_text .home_intro {
+  background-color: #EFF6F4; /* fallback */
+  background-color: RGBA(239, 246, 224, .9);
+  border-radius: 5px;
+  box-shadow: 0px 0px 8px #AEC3B0;
+  margin-bottom: 2.5em;
+  max-width: 80vw;
+  padding: 10px;
+}
+
+/* "Browse by category" adjustments */
+
+.image-grid .views-field-name {
+  padding-left: 10px;
+  padding-right: 10px; 
+}
+
+.image-grid .views-field-name .field-content {
+  line-height: 1.2em; 
+  margin-top: 1.5em; 
+}
+
+/* Stop titles from cutting off */
 
 @media (min-width: 768px) {
   .node-type-digital-heritage h1.page-header {
+    overflow: hidden;
     text-overflow: ellipsis;
     white-space: normal;
-    overflow: hidden;
   }
 }
+
+/* Search Box */
+
+#block-views-ee32d6a0eefea96d62828df6beda043f,
+header#page-header > .region-header > .block-views {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+}
+
+.region-header .views-exposed-widgets {
+  align-items: center;
+  display: flex;
+  justify-content: center !important;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
+
+.region-header .views-exposed-widgets input {
+  max-width: 30em;
+}
+
+.region-header .views-exposed-form .views-exposed-widget {
+  padding: 0;
+}
+
+#edit-search-api-views-fulltext {
+  border-radius: 5px;
+  border: solid 1px #124559;
+}
+
+/* ========
+Hide Items
+========= */
 
 /* Hide Browse menu item when not logged in */
 .not-logged-in .navbar-nav .leaf:nth-child(4) {
   border-right: none !important;
 }
-.not-logged-in .navbar-nav .last.leaf {
-  display: none;
-}
 
-/* Hide nav search when not logged in */
-.not-logged-in .region-header .views-exposed-widgets {
-  display: none;
-}
-
-/* Hide Reset button in nav search */
-.region-header .views-exposed-widgets .views-reset-button {
-  display: none;
-}
-
-/* Hide Image Metadata button */
-.digital-heritage-body .group-480-thumbnail-and-link + div {
-  display: none;
-}
-
-/* Hide site-wide search reset button on all but results page */
-.contextual-links-region .views-reset-button {
-  display: none;
-}
 .page-digital-heritage .contextual-links-region .views-reset-button {
   display: block;
+}
+
+.not-logged-in .navbar-nav .last.leaf,
+.not-logged-in .region-header .views-exposed-widgets, /* Hide nav search when not logged in */
+.region-header .views-exposed-widgets .views-reset-button, /* Hide Reset button in nav search */
+.digital-heritage-body .group-480-thumbnail-and-link + div, /* Hide Image Metadata button */
+.contextual-links-region .views-reset-button, /* Hide site-wide search reset button on all but results page */
+.not-logged-in.page-node-1 section#block-system-main + section /* Hide category browse on main page */
+{
+  display: none;
 }
