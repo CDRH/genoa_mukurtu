@@ -12376,8 +12376,6 @@ Genoa Theme Changes
 
 /* Header Font */
 
-/* @import url('https://fonts.googleapis.com/css2?family=Proza+Libre:wght@500&display=swap'); */
-
 /* including fonts locally
 /* latin-ext */
 @font-face {
@@ -12398,43 +12396,114 @@ Genoa Theme Changes
   unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
 }
 
+/* ==========
+General
+============ */
+
 .page-header {
   font-family: 'Proza Libre', sans-serif;
 }
 
-/* Design and colors */
+body {
+  background-color: #E0DDD0;
+}
 
-/* Header/ blue stripes styling */
+a,
+ul.pagination li a,
+.view-mode-search_result .field-name-title h2 a,
+.view-mode-teaser .field-name-title h2 a,
+.metadata-sidebar .field a,
+.grid-view .view-mode-search_result .field-name-title a {
+  text-decoration: underline;
+  color: #AC262B;
+}
+
+a:hover,
+ul.pagination li a:hover,
+ul.pagination li a:focus,
+.view-mode-search_result .field-name-title h2 a:hover,
+.view-mode-teaser .field-name-title h2 a:hover,
+.view-mode-search_result .field-name-title h2 a:focus,
+.view-mode-teaser .field-name-title h2 a:focus,
+.metadata-sidebar .field a:hover,
+.metadata-sidebar .field a:focus,
+.grid-view .view-mode-search_result .field-name-title a:hover,
+.grid-view .view-mode-search_result .field-name-title a:focus{
+  color: #851E22;
+  text-decoration-thickness: 2px;
+}
+
+.navbar-nav a,
+.image-grid a,
+.contextual-links-region a{
+  text-decoration: none;
+}
+
+/* navbar colors */
+
+.navbar-default .navbar-toggle:hover,
+.navbar-default .navbar-toggle:focus {
+  background-color: #E0DDD0;
+}
+
+@media (min-width: 768px) {
+  .navbar.container-fluid > #mukurtu-collapse-menu-container.container-fluid .navbar-collapse ul.navbar-nav.secondary > li {
+    border-right: 1px solid #E0DDD0;
+  }
+
+  .navbar.container-fluid > #mukurtu-collapse-menu-container.container-fluid .navbar-collapse ul.navbar-nav.secondary > li.active,
+  .navbar.container-fluid > #mukurtu-collapse-menu-container.container-fluid .navbar-collapse ul.navbar-nav.secondary > li:hover,
+  .navbar.container-fluid > #mukurtu-collapse-menu-container.container-fluid .navbar-collapse ul.navbar-nav.secondary > li:focus {
+    border-bottom: 6px solid #423010;
+  }
+  .navbar.container-fluid > #mukurtu-collapse-menu-container.container-fluid .navbar-collapse ul.navbar-nav.secondary > li.active a,
+  .navbar.container-fluid > #mukurtu-collapse-menu-container.container-fluid .navbar-collapse ul.navbar-nav.secondary > li:hover a,
+  .navbar.container-fluid > #mukurtu-collapse-menu-container.container-fluid .navbar-collapse ul.navbar-nav.secondary > li:focus a {
+    background-color: #E0DDD0;
+  }
+  .navbar.container-fluid > #mukurtu-collapse-menu-container.container-fluid .navbar-collapse ul.navbar-nav.secondary > li > a {
+    color: #423010;
+  }
+}
+
+#navbar-collapse.in .menu > li > a,
+#navbar-collapse.collapsing .menu > li > a,
+.navbar-default .navbar-toggle .collapse-menu-color-bars .icon-bar {
+  color: #423010;
+}
+
+#navbar-collapse.in .menu > li > a:hover,
+#navbar-collapse.collapsing .menu > li > a:hover,
+#navbar-collapse.in .menu > li > a:focus,
+#navbar-collapse.collapsing .menu > li > a:focus {
+  color: #AC262B;
+}
+
+.navbar-default {
+  background-color: #CCC2AD;
+}
+
+/* Footers and Headers */
 
 .node-type-digital-heritage h1.page-header, 
 .footer,
 .page-header {
-  background-color: #1D7581; /* fallback */
-  background-image: url(../images/blue_stripes.png);
   color: white;
 }
 
-.page-header { /* font set above */
+.page-header,
+.node-type-digital-heritage h1.page-header { /* font set above */
   background-repeat: repeat;
   background-size: auto;
   margin-bottom: 30px;
-  text-shadow: 0 0 .05em #124559, 0 .05em .05em #124559;
+  text-shadow: 0 0 .05em #423010, 0 .05em .05em #423010;
 }
 
-.navbar-default {
-  background-color: #eff6e0;
-}
-
-.page-node-1 {
-  background-color: #AEC3B0; /* fallback */
-  background-attachment: scroll;
-  background-image: linear-gradient(14deg, rgba(174,195,176,1) 0%, rgba(239,246,224,1) 100%); /* W3C */
-  background-position: center top; 
-  background-repeat: no-repeat;
-  background-size: 100vw auto, cover;
-}
-
-.footer, .page-header {
+.footer, 
+.page-header,
+.node-type-digital-heritage h1.page-header{
+  background-color: #0B5B3A;
+  background: #0B5B3A;
   padding: 20px !important;
 }
 
@@ -12442,16 +12511,63 @@ Genoa Theme Changes
   text-align: center;
 }
 
-/* Home Design */
+/* Stop titles from cutting off */
+
+@media (min-width: 768px) {
+  .node-type-digital-heritage h1.page-header {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: normal;
+  }
+}
+
+/* Featured categories */
+
+.image-grid .views-field-name,
+.panel-panel .pane-title {
+  background-color: #423010;
+}
+
+.image-grid .views-field-name:hover,
+.image-grid .views-field-name:focus,
+.panel-panel a .pane-title:hover,
+.scald-atom .field-name-download-atom a:hover,
+.scald-atom .field-name-download-atom a:focus{
+  background-color: #0B5B3A;
+}
+
+.image-grid .views-field-name .field-content a {
+  display: inline-block;
+  height: 135px;
+}
+
+/* Item page */
+
+.digital-heritage-body > .field::after,
+.metadata-sidebar .metadata-wrapper,
+.slick-carousel-slider-nav .slick-current,
+.scald-atom .field-name-download-atom a {
+  border-color: #423010;
+}
+
+.img-responsive {
+  border: solid 1px #423010;
+}
+
+/* ==========
+Home Design 
+=========== */
 
 .home_text .home_intro {
-  background-color: #EFF6F4; /* fallback */
-  background-color: RGBA(239, 246, 224, .9);
+  background-color: #CCC2AD;
   border-radius: 5px;
-  box-shadow: 0px 0px 8px #AEC3B0;
+  box-shadow: 0px 0px 8px #634718;
+  font-size: 1.2em;
   margin-bottom: 2.5em;
   max-width: 80vw;
+  padding-bottom: 1.5em;
   padding: 10px;
+  text-align: center;
 }
 
 /* "Browse by category" adjustments */
@@ -12466,14 +12582,40 @@ Genoa Theme Changes
   margin-top: 1.5em; 
 }
 
-/* Stop titles from cutting off */
+/* adjustments for hero image on home page */
 
-@media (min-width: 768px) {
-  .node-type-digital-heritage h1.page-header {
-    overflow: hidden;
-    text-overflow: ellipsis;
-    white-space: normal;
+.page-node-1.not-front .main-container {
+  padding:0;
+}
+
+.page-node-1.not-front .container-fluid {
+  padding:0;
+}
+
+.page-node-1 .region-content {
+  padding-left: 30px;
+  padding-right: 30px;
+}
+
+@media (min-width: 992px) {
+  .page-node-1 .region-content {
+    padding-left: 8%;
+    padding-right: 8%;
   }
+}
+
+@media (min-width: 1200px) {
+  .home_text.container {
+    width: auto;
+  }
+  .hero-image .img-responsive {
+    margin: auto;
+    max-width: 1200px;
+  }
+}
+
+.hero-image {
+  background-color: #423010;
 }
 
 /* Search Box */
