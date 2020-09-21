@@ -67,7 +67,6 @@ Admin menu > Content > Comments.
   - Search
   - Topic (renamed from Category)
   - Tribe (renamed from Tribal Affiliation)
-  - Keywords
   - Format
     - Add "Format" and "Format » Name" to index fields, re-index, and
       facet by "Format", not "Format » Name"
@@ -185,7 +184,6 @@ Display customizations:
   - Original Date
   - Topic (renamed from Category)
   - Tribe(s) (renamed from Tribal Affiliation)
-  - Keywords
   - People
   - Places (renamed from Location Description]
   - Format
