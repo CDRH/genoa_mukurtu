@@ -12405,7 +12405,7 @@ General
 }
 
 body {
-  background-color: #E0DDD0;
+  background-color: #FDF7ED;
 }
 
 a,
@@ -12443,26 +12443,26 @@ ul.pagination li a:focus,
 
 .navbar-default .navbar-toggle:hover,
 .navbar-default .navbar-toggle:focus {
-  background-color: #E0DDD0;
+  background-color: #FDF7ED;
 }
 
 @media (min-width: 768px) {
   .navbar.container-fluid > #mukurtu-collapse-menu-container.container-fluid .navbar-collapse ul.navbar-nav.secondary > li {
-    border-right: 1px solid #E0DDD0;
+    border-right: 1px solid #FDF7ED;
   }
 
   .navbar.container-fluid > #mukurtu-collapse-menu-container.container-fluid .navbar-collapse ul.navbar-nav.secondary > li.active,
   .navbar.container-fluid > #mukurtu-collapse-menu-container.container-fluid .navbar-collapse ul.navbar-nav.secondary > li:hover,
   .navbar.container-fluid > #mukurtu-collapse-menu-container.container-fluid .navbar-collapse ul.navbar-nav.secondary > li:focus {
-    border-bottom: 6px solid #423010;
+    border-bottom: 6px solid #8A362E;
   }
   .navbar.container-fluid > #mukurtu-collapse-menu-container.container-fluid .navbar-collapse ul.navbar-nav.secondary > li.active a,
   .navbar.container-fluid > #mukurtu-collapse-menu-container.container-fluid .navbar-collapse ul.navbar-nav.secondary > li:hover a,
   .navbar.container-fluid > #mukurtu-collapse-menu-container.container-fluid .navbar-collapse ul.navbar-nav.secondary > li:focus a {
-    background-color: #E0DDD0;
+    background-color: #FDF7ED;
   }
   .navbar.container-fluid > #mukurtu-collapse-menu-container.container-fluid .navbar-collapse ul.navbar-nav.secondary > li > a {
-    color: #423010;
+    color: #8A362E;
   }
 }
 
@@ -12480,7 +12480,7 @@ ul.pagination li a:focus,
 }
 
 .navbar-default {
-  background-color: #CCC2AD;
+  background-color: #FBEEDA;
 }
 
 /* Footers and Headers */
@@ -12495,19 +12495,22 @@ ul.pagination li a:focus,
 .node-type-digital-heritage h1.page-header { /* font set above */
   background-repeat: repeat;
   background-size: auto;
+  border-bottom: 10px solid #4F7F58;
   margin-bottom: 30px;
-  text-shadow: 0 0 .05em #423010, 0 .05em .05em #423010;
+  text-shadow: 0 0 .05em rgba(255,255,255,.5), 0 .05em .05em rgba(255,255,255,.5);
 }
 
 .footer, 
 .page-header,
 .node-type-digital-heritage h1.page-header{
-  background-color: #0B5B3A;
-  background: #0B5B3A;
+  background-color: #EBAB3C;
+  background: #EBAB3C;
   padding: 20px !important;
+  color: #423010;
 }
 
 .footer {
+  border-top: 10px solid #4F7F58;
   text-align: center;
 }
 
@@ -12525,7 +12528,7 @@ ul.pagination li a:focus,
 
 .image-grid .views-field-name,
 .panel-panel .pane-title {
-  background-color: #423010;
+  background-color: #8A362E;
 }
 
 .image-grid .views-field-name:hover,
@@ -12533,8 +12536,12 @@ ul.pagination li a:focus,
 .panel-panel a .pane-title:hover,
 .scald-atom .field-name-download-atom a:hover,
 .scald-atom .field-name-download-atom a:focus{
-  background-color: #0B5B3A;
+  background-color: #4F7F58;
 }
+
+/*.image-grid .views-field-name a:hover {
+  color: #423010;
+}*/
 
 .image-grid .views-field-name .field-content a {
   display: inline-block;
@@ -12547,11 +12554,11 @@ ul.pagination li a:focus,
 .metadata-sidebar .metadata-wrapper,
 .slick-carousel-slider-nav .slick-current,
 .scald-atom .field-name-download-atom a {
-  border-color: #423010;
+  border-color: #8A362E;
 }
 
 .img-responsive {
-  border: solid 1px #423010;
+  border: solid 1px #8A362E;
 }
 
 /* ==========
@@ -12559,15 +12566,19 @@ Home Design
 =========== */
 
 .home_text .home_intro {
-  background-color: #CCC2AD;
+  background-color: #FBEEDA;
   border-radius: 5px;
-  box-shadow: 0px 0px 8px #634718;
+  border: 2px solid #4F7F58;
   font-size: 1.2em;
   margin-bottom: 2.5em;
   max-width: 80vw;
   padding-bottom: 1.5em;
   padding: 10px;
   text-align: center;
+}
+
+.home_text .home_intro p {
+  padding-bottom: 1em;
 }
 
 /* "Browse by category" adjustments */
@@ -12615,7 +12626,7 @@ Home Design
 }
 
 .hero-image {
-  background-color: #423010;
+  background-color: #8A362E;
 }
 
 /* Search Box */
@@ -12671,3 +12682,24 @@ Hide Items
 {
   display: none;
 }
+
+
+
+
+
+.footer a {
+  color: inherit;
+  font-size:  inherit;
+  font-weight: inherit;
+  text-decoration: underline;
+}
+
+hr {
+  border-color: #8A362E;
+}
+
+
+
+
+
+
