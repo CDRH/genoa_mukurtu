@@ -6,7 +6,7 @@
   - [New Content](#new-content)
   - [All Existing Nodes](#all-existing-nodes)
 - [Digital Heritage Browse Facets](#digital-heritage-browse-facets)
-  - [Customiza Browse Facets via Admin UI](#customize-browse-facets-via-admin-ui)
+  - [Customize Browse Facets via Admin UI](#customize-browse-facets-via-admin-ui)
   - [Completely Disable Search Facets](#completely-disable-search-facets)
   - [Disable on This Page Only](#disable-on-this-page-only)
   - [Index a Field for Faceting](#index-a-field-for-faceting)
@@ -74,16 +74,17 @@ Admin menu > Content > Comments.
       facet by "Format", not "Format » Name"
   - Type
 
-### Customiza Browse Facets via Admin UI
+### Customize Browse Facets via Admin UI
 Sign in, click "Browse" (redirects to `/digital-heritage` path), click gear in
 far upper right of page content, click "Edit Panel".
 
 The UI elements under "Left" are what display in the browse page's facets. Click
 the gear left of "Left" to add content. Click and drag to re-order facets. Click
-the gears right of the facets' names to customize labels, remove, etc.
+the gears right of the facets' names to customize labels, remove, etc. Click
+"Update and Save" awkwardly placed on the right to save changes here.
 
-Changes via the admin UI here will override changes to the file at the path
-documented above.
+Changes via the admin UI here will override changes to the file
+`ma_digitalheritage.pages_default.inc` in stricken documentation below.
 
 ### Completely Disable Search Facets
 Admin Menu > Configuration > Search and metadata > Search API
@@ -109,7 +110,7 @@ Note a copy of a fully customized file is included in this repository in
 `files/`
 </s>
 
-See [Customiza Browse Facets via Admin UI](#customize-browse-facets-via-admin-ui)
+See [Customize Browse Facets via Admin UI](#customize-browse-facets-via-admin-ui)
 
 ### Index a Field for Faceting
 Admin Menu > Configuration > Search and metadata > Search API
@@ -158,7 +159,7 @@ Save the changes to the file and your new filter facet should appear on the
 Digital Heritage browse page
 </s>
 
-See [Customiza Browse Facets via Admin UI](#customize-browse-facets-via-admin-ui)
+See [Customize Browse Facets via Admin UI](#customize-browse-facets-via-admin-ui)
 
 ## Digital Heritage Preview Displays
 
