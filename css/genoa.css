@@ -4213,7 +4213,7 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
 .navbar-fixed-bottom .navbar-collapse {
   max-height: 340px;
 }
-@media (max-device-width: 480px) and (orientation: landscape) {
+@media (max-device-width: 480px) and (Bellezation: landscape) {
   .navbar-fixed-top .navbar-collapse,
   .navbar-fixed-bottom .navbar-collapse {
     max-height: 200px;
@@ -12379,29 +12379,31 @@ Genoa Theme Changes
 /* including fonts locally
 /* latin-ext */
 @font-face {
-  font-family: 'Proza Libre';
+  font-family: 'Belleza';
   font-style: normal;
-  font-weight: 500;
+  font-weight: 400;
   font-display: swap;
-  src: local('Proza Libre Medium'), local('ProzaLibre-Medium'), url(../fonts/ProzaLibre-latinext.woff2) format('woff2');
+  src: local('Belleza'), local('Belleza-Regular'), url(../fonts/Belleza-latinext.woff2) format('woff2');
   unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
 }
 /* latin */
 @font-face {
-  font-family: 'Proza Libre';
+  font-family: 'Belleza';
   font-style: normal;
-  font-weight: 500;
+  font-weight: 400;
   font-display: swap;
-  src: local('Proza Libre Medium'), local('ProzaLibre-Medium'), url(../fonts/ProzaLibre-latin.woff2) format('woff2');
+  src: local('Belleza'), local('Belleza-Regular'), url(../fonts/Belleza-latin.woff2) format('woff2');
   unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
 }
+
+
 
 /* ==========
 General
 ============ */
 
 .page-header {
-  font-family: 'Proza Libre', sans-serif;
+  font-family: 'Belleza', sans-serif;
 }
 
 body {
@@ -12437,6 +12439,32 @@ ul.pagination li a:focus,
 .image-grid a,
 .contextual-links-region a{
   text-decoration: none;
+}
+
+/* Figure classes, used in about genoa */
+
+.figure_right, .figure_left {
+  border: 1px solid #aaa;
+  padding: 10px
+}
+
+.figure_right figcaption, .figure_left figcaption {
+  line-height: 1em
+}
+
+@media (min-width: 500px) {
+  .figure_right, .figure_left {
+    width: 300px;
+  }
+  .figure_right {
+    float: right;
+    margin: 0 0 20px 10px;
+  }
+
+  .figure_left {
+    float: left;
+    margin: 0 20px 10px 0
+  }
 }
 
 /* navbar colors */
@@ -12512,6 +12540,30 @@ ul.pagination li a:focus,
 .footer {
   border-top: 10px solid #4F7F58;
   text-align: center;
+}
+
+.footer a {
+  color: inherit;
+  font-size:  inherit;
+  font-weight: inherit;
+  text-decoration: underline;
+}
+
+hr {
+  border-color: #8A362E;
+}
+
+/* Logo is also on home page */
+.footer-logo, .site-logo {
+  background-image: url('../images/genoa-logo-web-crop.png');
+  background-position: top center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  height: 300px;
+}
+
+.footer-logo {
+  height: 200px;
 }
 
 /* Stop titles from cutting off */
@@ -12665,41 +12717,25 @@ Hide Items
 ========= */
 
 /* Hide Browse menu item when not logged in */
-.not-logged-in .navbar-nav .leaf:nth-child(4) {
+/*.not-logged-in .navbar-nav .leaf:nth-child(4) {
   border-right: none !important;
-}
+}*/
 
 .page-digital-heritage .contextual-links-region .views-reset-button {
   display: block;
 }
 
-.not-logged-in .navbar-nav .last.leaf,
-.not-logged-in .region-header .views-exposed-widgets, /* Hide nav search when not logged in */
+/*.not-logged-in .navbar-nav .last.leaf,
+.not-logged-in .region-header .views-exposed-widgets,*/ /* Hide nav search when not logged in */
+/*.not-logged-in.page-node-1 section#block-system-main + section*/ /* Hide category browse on main page */
+/*{
+  display: none;
+}
+*/
+
 .region-header .views-exposed-widgets .views-reset-button, /* Hide Reset button in nav search */
 .digital-heritage-body .group-480-thumbnail-and-link + div, /* Hide Image Metadata button */
-.contextual-links-region .views-reset-button, /* Hide site-wide search reset button on all but results page */
-.not-logged-in.page-node-1 section#block-system-main + section /* Hide category browse on main page */
+.contextual-links-region .views-reset-button /* Hide site-wide search reset button on all but results page */
 {
   display: none;
 }
-
-
-
-
-
-.footer a {
-  color: inherit;
-  font-size:  inherit;
-  font-weight: inherit;
-  text-decoration: underline;
-}
-
-hr {
-  border-color: #8A362E;
-}
-
-
-
-
-
-
