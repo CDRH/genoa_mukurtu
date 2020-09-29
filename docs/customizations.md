@@ -5,7 +5,8 @@
 - [Disable Comments](#disable-comments)
   - [New Content](#new-content)
   - [All Existing Nodes](#all-existing-nodes)
-- [Digital Heritage Browse Facets](#digital-heritage-browse-filters)
+- [Digital Heritage Browse Facets](#digital-heritage-browse-facets)
+  - [Customize Browse Facets via Admin UI](#customize-browse-facets-via-admin-ui)
   - [Completely Disable Search Facets](#completely-disable-search-facets)
   - [Disable on This Page Only](#disable-on-this-page-only)
   - [Index a Field for Faceting](#index-a-field-for-faceting)
@@ -62,16 +63,28 @@ Admin menu > Content > Comments.
 
 - Remove Collection
 - Remove Community
+- Remove Keywords
 - Remove Media Type
 - Change the order of facets to:
   - Search
   - Topic (renamed from Category)
   - Tribe (renamed from Tribal Affiliation)
-  - Keywords
   - Format
     - Add "Format" and "Format » Name" to index fields, re-index, and
       facet by "Format", not "Format » Name"
   - Type
+
+### Customize Browse Facets via Admin UI
+Sign in, click "Browse" (redirects to `/digital-heritage` path), click gear in
+far upper right of page content, click "Edit Panel".
+
+The UI elements under "Left" are what display in the browse page's facets. Click
+the gear left of "Left" to add content. Click and drag to re-order facets. Click
+the gears right of the facets' names to customize labels, remove, etc. Click
+"Update and Save" awkwardly placed on the right to save changes here.
+
+Changes via the admin UI here will override changes to the file
+`ma_digitalheritage.pages_default.inc` in stricken documentation below.
 
 ### Completely Disable Search Facets
 Admin Menu > Configuration > Search and metadata > Search API
@@ -84,6 +97,7 @@ Guessing this is not the approach we want to take due to possibly unforseen
 consequences elsewhere on the site.
 
 ### Disable on This Page Only
+<s>
 This appears to not be customizable via the admin UI.
 
 Edit `(path to site)/master/sites/all/modules/custom/features/ma_digitalheritage/ma_digitalheritage.pages_default.inc`
@@ -94,6 +108,9 @@ disable that block.
 
 Note a copy of a fully customized file is included in this repository in
 `files/`
+</s>
+
+See [Customize Browse Facets via Admin UI](#customize-browse-facets-via-admin-ui)
 
 ### Index a Field for Faceting
 Admin Menu > Configuration > Search and metadata > Search API
@@ -126,6 +143,7 @@ Scroll to the facet you just enabled and click "Configure display"
 - Click Save configuration
 
 ### Add Facet Field to Page
+<s>
 Edit `(path to site)/master/sites/all/modules/custom/features/ma_digitalheritage/ma_digitalheritage.pages_default.inc`
 
 - Duplicate a block of code for a pane (from `$pane = new stdClass()` to
@@ -139,6 +157,9 @@ Edit `(path to site)/master/sites/all/modules/custom/features/ma_digitalheritage
 
 Save the changes to the file and your new filter facet should appear on the
 Digital Heritage browse page
+</s>
+
+See [Customize Browse Facets via Admin UI](#customize-browse-facets-via-admin-ui)
 
 ## Digital Heritage Preview Displays
 
@@ -185,7 +206,6 @@ Display customizations:
   - Original Date
   - Topic (renamed from Category)
   - Tribe(s) (renamed from Tribal Affiliation)
-  - Keywords
   - People
   - Places (renamed from Location Description]
   - Format
