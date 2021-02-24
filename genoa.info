@@ -23,4 +23,4 @@ regions[page_bottom]    = 'Page bottom'
 ;;;;;;;;;;;;;;;;;;;;;
 ;; Stylesheets
 ;;;;;;;;;;;;;;;;;;;;;
-stylesheets[all][] = css/genoa.css
+stylesheets[all][] = genoa.css
