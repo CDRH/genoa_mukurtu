@@ -7794,7 +7794,7 @@ form.comment-form .comment-reply-post-button {
   height: 100%;
 }
 .chevron-right {
-  background-image: url(../images/icons/chevronright.svg);
+  background-image: url(../mukurtu/images/icons/chevronright.svg);
   background-repeat: no-repeat;
   background-position: 95% 0%;
   background-size: 12px;
@@ -7802,7 +7802,7 @@ form.comment-form .comment-reply-post-button {
   padding-right: 25px;
 }
 .chevron-right-middle {
-  background-image: url(../images/icons/chevronright.svg);
+  background-image: url(../mukurtu/images/icons/chevronright.svg);
   background-repeat: no-repeat;
   background-position: 95% 0%;
   background-size: 12px;
@@ -7816,7 +7816,7 @@ form.comment-form .comment-reply-post-button {
   background-size: 12px;
   min-height: 20px;
   padding-right: 25px;
-  background-image: url(../images/icons/chevronright.svg);
+  background-image: url(../mukurtu/images/icons/chevronright.svg);
 }
 .chevron-right-middle-contrast {
   background-repeat: no-repeat;
@@ -7825,19 +7825,19 @@ form.comment-form .comment-reply-post-button {
   min-height: 20px;
   padding-right: 25px;
   background-position: 95% 50%;
-  background-image: url(../images/icons/chevronright.svg);
+  background-image: url(../mukurtu/images/icons/chevronright.svg);
 }
 .chevron-dropdown {
-  background-image: url(../images/icons/chevron_dropdown_blue.svg);
+  background-image: url(../mukurtu/images/icons/chevron_dropdown_blue.svg);
   background-repeat: no-repeat;
   background-position: 95% 50%;
 }
 .arrow-right {
-  background: url(../images/icons/triangle_arrow_right.svg) no-repeat 0% 50%;
+  background: url(../mukurtu/images/icons/triangle_arrow_right.svg) no-repeat 0% 50%;
   background-position: center right;
 }
 .arrow-down {
-  background: url(../images/icons/triangle_arrow_down.svg) no-repeat 0% 50%;
+  background: url(../mukurtu/images/icons/triangle_arrow_down.svg) no-repeat 0% 50%;
 }
 .nav-bottom-triangle::after {
   content: "";
@@ -7893,7 +7893,7 @@ form.comment-form .comment-reply-post-button {
   font-weight: bold;
 }
 .item-grid-view .field-name-title h2 {
-  background-image: url(../images/icons/chevronright.svg);
+  background-image: url(../mukurtu/images/icons/chevronright.svg);
   background-repeat: no-repeat;
   background-position: 95% 0%;
   background-size: 12px;
@@ -7920,7 +7920,7 @@ form.comment-form .comment-reply-post-button {
 }
 .thumbnail-on-link .views-field-name {
   background-color: #707070;
-  background-image: url(../images/icons/chevronright.svg);
+  background-image: url(../mukurtu/images/icons/chevronright.svg);
   background-repeat: no-repeat;
   background-position: 95% 0%;
   background-size: 12px;
@@ -8001,7 +8001,7 @@ footer header {
   padding-top: 30px;
 }
 .footer .contactus .emailicon {
-  background: url(../images/icons/email.svg) no-repeat 0% 50%;
+  background: url(../mukurtu/images/icons/email.svg) no-repeat 0% 50%;
   background-position: left center;
   padding-left: 30px;
 }
@@ -8010,7 +8010,7 @@ footer header {
   padding-left: 5px;
 }
 .footer .twittericon {
-  background: url(../images/icons/twitter.svg) no-repeat 0% 50%;
+  background: url(../mukurtu/images/icons/twitter.svg) no-repeat 0% 50%;
   background-position: left center;
   padding-left: 30px;
 }
@@ -8062,7 +8062,7 @@ footer header {
   line-height: 1em;
   font-size: 40px;
   width: 100%;
-  background: url(../images/icons/chevrondown.svg) no-repeat 0% 50%;
+  background: url(../mukurtu/images/icons/chevrondown.svg) no-repeat 0% 50%;
   background-position: bottom center;
   padding-bottom: 50px;
 }
@@ -8152,7 +8152,7 @@ footer header {
   line-height: 1em;
   font-size: 40px;
   width: 100%;
-  background: url(../images/icons/chevrondown.svg) no-repeat 0% 50%;
+  background: url(../mukurtu/images/icons/chevrondown.svg) no-repeat 0% 50%;
   background-position: bottom center;
   padding-bottom: 50px;
 }
@@ -8639,7 +8639,7 @@ ul.pagination li.pager-ellipsis span {
   letter-spacing: 1.2px;
   background: #707070;
   text-transform: uppercase;
-  background-image: url(../images/icons/chevrondown.svg);
+  background-image: url(../mukurtu/images/icons/chevrondown.svg);
   background-repeat: no-repeat;
   background-position: 95% 50%;
   background-size: 20px;
@@ -8917,7 +8917,7 @@ section ol.breadcrumb {
   background: #d1cbcb;
 }
 .mejs__container .mejs__controls .mejs__button button {
-  background: transparent url(../images/icons/mejs-controls-gold.svg) no-repeat;
+  background: transparent url(../mukurtu/images/icons/mejs-controls-gold.svg) no-repeat;
 }
 .mejs__container .mejs__controls .mejs__play,
 .mejs__container .mejs__controls .mejs__replay {
@@ -8926,7 +8926,7 @@ section ol.breadcrumb {
 }
 .mejs__container .mejs__controls .mejs__play button,
 .mejs__container .mejs__controls .mejs__replay button {
-  background: transparent url(../images/icons/play_gold.svg) no-repeat;
+  background: transparent url(../mukurtu/images/icons/play_gold.svg) no-repeat;
   background-size: 20px;
   height: 100%;
   width: 100%;
@@ -8994,14 +8994,14 @@ section ol.breadcrumb {
   background: #d1cbcb;
 }
 .mejs-container-old .mejs-controls .mejs-button button {
-  background: transparent url(../images/icons/mejs-controls-gold.svg) no-repeat;
+  background: transparent url(../mukurtu/images/icons/mejs-controls-gold.svg) no-repeat;
 }
 .mejs-container-old .mejs-controls .mejs-play {
   height: 50px;
   width: 40px;
 }
 .mejs-container-old .mejs-controls .mejs-play button {
-  background: transparent url(../images/icons/play_gold.svg) no-repeat;
+  background: transparent url(../mukurtu/images/icons/play_gold.svg) no-repeat;
   background-size: 20px;
   height: 100%;
   width: 100%;
@@ -9312,7 +9312,7 @@ body #admin-menu {
   font-size: 13px;
   text-transform: uppercase;
   letter-spacing: 1.2px;
-  background: url(../images/icons/triangle_arrow_right.svg) no-repeat 0% 50%;
+  background: url(../mukurtu/images/icons/triangle_arrow_right.svg) no-repeat 0% 50%;
   background-position: center right;
   padding-right: 15px;
 }
@@ -9352,7 +9352,7 @@ body #admin-menu {
   margin-top: 0px;
 }
 .view-mukurtu-frontpage-featured-content .field-name-title h2 a {
-  background: url(../images/icons/triangle_arrow_right.svg) no-repeat 0% 50%;
+  background: url(../mukurtu/images/icons/triangle_arrow_right.svg) no-repeat 0% 50%;
   background-position: center right;
   font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
   font-weight: 300;
@@ -9562,7 +9562,7 @@ body #admin-menu {
   font-weight: bold;
 }
 .grid-view .view-mode-search_result .field-name-title h2 {
-  background-image: url(../images/icons/chevronright.svg);
+  background-image: url(../mukurtu/images/icons/chevronright.svg);
   background-repeat: no-repeat;
   background-position: 95% 0%;
   background-size: 12px;
@@ -9594,7 +9594,7 @@ body #admin-menu {
 }
 .image-grid .views-field-name {
   background-color: #707070;
-  background-image: url(../images/icons/chevronright.svg);
+  background-image: url(../mukurtu/images/icons/chevronright.svg);
   background-repeat: no-repeat;
   background-position: 95% 0%;
   background-size: 12px;
@@ -9722,7 +9722,7 @@ body #admin-menu {
   background-size: 12px;
   min-height: 20px;
   padding-right: 25px;
-  background-image: url(../images/icons/chevronright.svg);
+  background-image: url(../mukurtu/images/icons/chevronright.svg);
   color: #cbcbcb;
   vertical-align: middle;
   margin: auto;
@@ -9757,7 +9757,7 @@ body #admin-menu {
   letter-spacing: 1.2px;
   background: #707070;
   text-transform: uppercase;
-  background-image: url(../images/icons/chevrondown.svg);
+  background-image: url(../mukurtu/images/icons/chevrondown.svg);
   background-repeat: no-repeat;
   background-position: 95% 50%;
   background-size: 20px;
@@ -10065,7 +10065,7 @@ body #admin-menu {
     padding-bottom: 20px;
   }
   .large-teaser-box .field-name-node-link a {
-    background-image: url(../images/icons/chevronright.svg);
+    background-image: url(../mukurtu/images/icons/chevronright.svg);
     background-repeat: no-repeat;
     background-position: 95% 0%;
     background-size: 12px;
@@ -10483,7 +10483,7 @@ body #admin-menu {
 .node-personal-collection.view-mode-full .field-name-field-digital-heritage-items .view-mode-search_result .field-name-title h2,
 .node-word-list.view-mode-full .field-name-field-digital-heritage-items .view-mode-search_result .field-name-title h2,
 .node-collection.view-mode-full .field-name-field-digital-heritage-items .view-mode-search_result .field-name-title h2 {
-  background-image: url(../images/icons/chevronright.svg);
+  background-image: url(../mukurtu/images/icons/chevronright.svg);
   background-repeat: no-repeat;
   background-position: 95% 0%;
   background-size: 12px;
@@ -10717,7 +10717,7 @@ body #admin-menu {
 }
 .node-cultural-protocol-group.view-mode-full .metadata-wrapper .field-name-community-membership-status,
 .node-community.view-mode-full .metadata-wrapper .field-name-community-membership-status {
-  background-image: url(../images/icons/chevronright.svg);
+  background-image: url(../mukurtu/images/icons/chevronright.svg);
   background-repeat: no-repeat;
   background-position: 95% 0%;
   background-size: 12px;
@@ -10780,7 +10780,7 @@ body #admin-menu {
 }
 .node-cultural-protocol-group.view-mode-full .view-footer a,
 .node-community.view-mode-full .view-footer a {
-  background: url(../images/icons/triangle_arrow_right.svg) no-repeat 0% 50%;
+  background: url(../mukurtu/images/icons/triangle_arrow_right.svg) no-repeat 0% 50%;
   background-position: center right;
   color: #138aab;
   padding-right: 15px;
@@ -10794,7 +10794,7 @@ body #admin-menu {
   text-decoration: none;
 }
 .view-community-dh-items .views-row {
-  background-image: url(../images/icons/chevronright.svg);
+  background-image: url(../mukurtu/images/icons/chevronright.svg);
   background-repeat: no-repeat;
   background-position: 95% 0%;
   background-size: 12px;
@@ -10829,7 +10829,7 @@ body #admin-menu {
   color: #fff;
   font-weight: bold;
   letter-spacing: 1.2px;
-  background: url(../images/icons/triangle_arrow_right.svg) no-repeat 0% 50%;
+  background: url(../mukurtu/images/icons/triangle_arrow_right.svg) no-repeat 0% 50%;
   background-position: center right;
   padding-right: 15px;
 }
@@ -10976,7 +10976,7 @@ body #admin-menu {
   padding: 10px 15px 10px 15px;
 }
 .page-dictionary .dictionary-facets-region .dropdown button {
-  background-image: url(../images/icons/chevron_dropdown_blue.svg);
+  background-image: url(../mukurtu/images/icons/chevron_dropdown_blue.svg);
   background-repeat: no-repeat;
   background-position: 95% 50%;
   height: 60px;
@@ -11161,7 +11161,7 @@ body #admin-menu {
   min-height: 20px;
   padding-right: 25px;
   background-position: 95% 50%;
-  background-image: url(../images/icons/chevronright.svg);
+  background-image: url(../mukurtu/images/icons/chevronright.svg);
   background-size: 18px;
   height: 68px;
   padding: 0px 0px 0px 10px;
@@ -11246,7 +11246,7 @@ body #admin-menu {
   margin-left: -15%;
 }
 .view-mode-taxonomy_record_teaser .field-name-title {
-  background-image: url(../images/icons/chevronright.svg);
+  background-image: url(../mukurtu/images/icons/chevronright.svg);
   background-repeat: no-repeat;
   background-position: 95% 0%;
   background-size: 12px;
@@ -11355,7 +11355,7 @@ body #admin-menu {
   padding-left: 0px;
 }
 .node-person.view-mode-full .field-name-table-of-contents ul li {
-  background: url(../images/icons/triangle_arrow_right.svg) no-repeat 0% 50%;
+  background: url(../mukurtu/images/icons/triangle_arrow_right.svg) no-repeat 0% 50%;
   background-position: center right;
   padding-left: 20px;
   background-position: center left;
@@ -11616,7 +11616,7 @@ body #admin-menu {
 .node-event .group-right > .panel .panel-collapse a,
 .node-document-library .group-right > .panel .panel-collapse a,
 .node-document-page .group-right > .panel .panel-collapse a {
-  background: url(../images/icons/triangle_arrow_right.svg) no-repeat 0% 50%;
+  background: url(../mukurtu/images/icons/triangle_arrow_right.svg) no-repeat 0% 50%;
   background-position: center right;
   color: #138aab;
   padding-right: 15px;
@@ -12383,7 +12383,7 @@ Genoa Theme Changes
   font-style: normal;
   font-weight: 400;
   font-display: swap;
-  src: local('Belleza'), local('Belleza-Regular'), url(../fonts/Belleza-latinext.woff2) format('woff2');
+  src: local('Belleza'), local('Belleza-Regular'), url(fonts/Belleza-latinext.woff2) format('woff2');
   unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
 }
 /* latin */
@@ -12392,7 +12392,7 @@ Genoa Theme Changes
   font-style: normal;
   font-weight: 400;
   font-display: swap;
-  src: local('Belleza'), local('Belleza-Regular'), url(../fonts/Belleza-latin.woff2) format('woff2');
+  src: local('Belleza'), local('Belleza-Regular'), url(fonts/Belleza-latin.woff2) format('woff2');
   unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
 }
 
@@ -12555,7 +12555,7 @@ hr {
 
 /* Logo is also on home page */
 .footer-logo, .site-logo {
-  background-image: url('../images/genoa-logo-web-crop.png');
+  background-image: url('images/genoa-logo-web-crop.png');
   background-position: top center;
   background-repeat: no-repeat;
   background-size: contain;
