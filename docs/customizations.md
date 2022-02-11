@@ -283,6 +283,68 @@ Started Guide".
 
 Scroll down and click "Save blocks". Now close the admin UI.
 
+### Mukurtu 2.1.8+
+Mukurtu no longer seems to handle the customization of the search form itself
+via the Admin Menu and had to be handled via the code for this view.
+
+If the view has been customized via the Admin Menu in the past, it should be
+reverted so the view is loaded from the code rather than the database (in table
+`views_display`).
+
+Admin Menu > Structure > Views
+
+Scroll down to Digital Heritage Browse. If underneath the title is the text
+"Database overriding code' rather than "In code", one must click the arrow right
+of the "Edit" button on the right side of the row. Then click "Revert".
+
+Now we must modify the file controlling the display of this view, `(path to
+site)/master/sites/all/modules/custom/features/ma_digitalheritage/ma_digitalheritage.views_default.inc`.
+An example version of this file resides at
+[/files/ma_digitalheritage_views_default_views.inc](../files/ma_digitalheritage_views_default_views.inc).
+The section of code related to the view we're using for site-wide search begins
+on line 215 for the view `digital_heritage_grid_list`. The specific "display"
+which needs customization begins on line 307. This view just needs a "path"
+display option added.
+
+```php
+  /* Display: All */
+  $handler = $view->new_display('panel_pane', 'All', 'all');
+  $handler->display->display_options['exposed_block'] = TRUE;
+  $handler->display->display_options['inherit_panels_path'] = '1';
+  /* Custom site-wide nav search fix */
+  $handler->display->display_options['path'] = '/digital-heritage';
+  /* /Custom site-wide nav search fix */
+```
+
+This should make the site-wide nav search function as before.
+
+For potential future troubleshooting, the settings that previously worked via
+the Admin Menu were attempted here but these didn't even work when hardcoded.
+Adding the `link_display` option with the value `custom_url` to the "default
+Master" display, changing the `digital_heritage_grid_list` display's
+`inherit_panels_path` option to `0`, and adding a `link_url` option with the
+value `/digital-heritage` were the settings tried.
+
+```php
+  /* Display: Master */
+  $handler = $view->new_display('default', 'Master', 'default');
+  $handler->display->display_options['css_class'] = 'browse-view';
+  /* Custom site-wide nav search fix */
+//  $handler->display->display_options['link_display'] = 'custom_url';
+  /* /Custom site-wide nav search fix */
+
+...
+
+  /* Display: All */
+  $handler = $view->new_display('panel_pane', 'All', 'all');
+  $handler->display->display_options['exposed_block'] = TRUE;
+  /* Custom site-wide nav search fix */
+  $handler->display->display_options['inherit_panels_path'] = '0';
+  $handler->display->display_options['link_url'] = '/digital-heritage';
+  /* /Custom site-wide nav search fix */
+```
+
+### Mukurtu Before 2.1.8
 Mouse over the search form near the top of the page and click the gear in the
 upper right corner. Click "Edit view".
 
