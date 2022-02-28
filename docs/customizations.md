@@ -6,18 +6,20 @@
   - [New Content](#new-content)
   - [All Existing Nodes](#all-existing-nodes)
 - [Digital Heritage Browse Facets](#digital-heritage-browse-facets)
-  - [Customize Browse Facets via Admin UI](#customize-browse-facets-via-admin-ui)
-  - [Completely Disable Search Facets](#completely-disable-search-facets)
-  - [Disable on This Page Only](#disable-on-this-page-only)
   - [Index a Field for Faceting](#index-a-field-for-faceting)
   - [Enable a Facet Field](#enable-a-facet-field)
-  - [Add Facet Field to Page](#add-facet-field-to-page)
+  - [Customize Browse Facets via Admin UI](#customize-browse-facets-via-admin-ui)
+  - [Deprecated Facet Customization](#deprecated-facet-customization)
+    - [Completely Disable Search Facets](#completely-disable-search-facets)
+    - [Disable on This Page Only](#disable-on-this-page-only)
+    - [Add Facet Field to Page](#add-facet-field-to-page)
 - [Digital Heritage Preview Displays](#digital-heritage-preview-displays)
 - [Digital Heritage Full Display](#digital-heritage-full-display)
 - [Allowed HTML Elements](#allowed-html-elements)
 - [Add Customizable Footer](#add-customizable-footer)
 - [Image Download Links](#image-download-links)
 - [Add Site-wide Search](#add-site-wide-search)
+- [Customize home page contents](#customize-home-page-contents)
 
 ## Account Registration
 Admin Menu > Configuration > People > Account settings
@@ -61,6 +63,8 @@ Admin menu > Content > Comments.
 
 ## Digital Heritage Browse Facets
 
+A brief outline of the customizations we have made:
+
 - Remove Collection
 - Remove Community
 - Remove Keywords
@@ -74,43 +78,10 @@ Admin menu > Content > Comments.
       facet by "Format", not "Format » Name"
   - Type
 
-### Customize Browse Facets via Admin UI
-Sign in, click "Browse" (redirects to `/digital-heritage` path), click gear in
-far upper right of page content, click "Edit Panel".
-
-The UI elements under "Left" are what display in the browse page's facets. Click
-the gear left of "Left" to add content. Click and drag to re-order facets. Click
-the gears right of the facets' names to customize labels, remove, etc. Click
-"Update and Save" awkwardly placed on the right to save changes here.
-
-Changes via the admin UI here will override changes to the file
-`ma_digitalheritage.pages_default.inc` in stricken documentation below.
-
-### Completely Disable Search Facets
-Admin Menu > Configuration > Search and metadata > Search API
-
-Click the drop-down arrow right of the Edit button for "Default node index" and
-click Facets
-
-One may uncheck the boxes next to facets to be completely disabled site-wide.
-Guessing this is not the approach we want to take due to possibly unforseen
-consequences elsewhere on the site.
-
-### Disable on This Page Only
-<s>
-This appears to not be customizable via the admin UI.
-
-Edit `(path to site)/master/sites/all/modules/custom/features/ma_digitalheritage/ma_digitalheritage.pages_default.inc`
-
-Look for `'override_title_text' => 'Media Type',` for the block you'd like to
-disable. Comment lines between `$pane = new stdClass()` and the next instance to
-disable that block.
-
-Note a copy of a fully customized file is included in this repository in
-`files/`
-</s>
-
-See [Customize Browse Facets via Admin UI](#customize-browse-facets-via-admin-ui)
+The best way to handle this recently was to:
+- Add the Tribal Affiliation, Name, and Name Format fields to the index
+  for faceting and reindex all items
+- Then customize the browse facets via the Admin UI
 
 ### Index a Field for Faceting
 Admin Menu > Configuration > Search and metadata > Search API
@@ -142,7 +113,47 @@ Scroll to the facet you just enabled and click "Configure display"
 - Scroll down to Global Settings > Hard limit and set to "No limit"
 - Click Save configuration
 
-### Add Facet Field to Page
+### Customize Browse Facets via Admin UI
+Sign in, click "Browse" (redirects to `/digital-heritage` path), click gear in
+far upper right of page content, click "Edit Panel".
+
+The UI elements under "Left" are what display in the browse page's facets. Click
+the gear left of "Left" to add content. Click and drag to re-order facets. Click
+the gears right of the facets' names to customize labels, remove, etc. Click
+"Update and Save" awkwardly placed on the right to save changes here.
+
+Changes via the admin UI here will override changes to the file
+`ma_digitalheritage.pages_default.inc` in stricken documentation below.
+
+### Deprecated Facet Customization
+
+#### Completely Disable Search Facets
+Admin Menu > Configuration > Search and metadata > Search API
+
+Click the drop-down arrow right of the Edit button for "Default node index" and
+click Facets
+
+One may uncheck the boxes next to facets to be completely disabled site-wide.
+Guessing this is not the approach we want to take due to possibly unforseen
+consequences elsewhere on the site.
+
+#### Disable on This Page Only
+<s>
+This appears to not be customizable via the admin UI.
+
+Edit `(path to site)/master/sites/all/modules/custom/features/ma_digitalheritage/ma_digitalheritage.pages_default.inc`
+
+Look for `'override_title_text' => 'Media Type',` for the block you'd like to
+disable. Comment lines between `$pane = new stdClass()` and the next instance to
+disable that block.
+
+Note a copy of a fully customized file is included in this repository in
+`files/`
+</s>
+
+See [Customize Browse Facets via Admin UI](#customize-browse-facets-via-admin-ui)
+
+#### Add Facet Field to Page
 <s>
 Edit `(path to site)/master/sites/all/modules/custom/features/ma_digitalheritage/ma_digitalheritage.pages_default.inc`
 
@@ -159,8 +170,6 @@ Save the changes to the file and your new filter facet should appear on the
 Digital Heritage browse page
 </s>
 
-See [Customize Browse Facets via Admin UI](#customize-browse-facets-via-admin-ui)
-
 ## Digital Heritage Preview Displays
 
 These are the display formats we're customizing:
@@ -170,8 +179,11 @@ These are the display formats we're customizing:
 - Teaser
   - Hover over an item on a page such as `/tags/parents-and-siblings`, click the
     gear, click "Manage display"
+- Alternatively go to Admin > Structure > Content Types > Digital Heritage >
+  Manage display and click "Search result highlighting input" or "Teaser"
 
 with the following field settings:
+- Disable Mukurtu Mobile Sync even though field may say it is hidden
 - Topic (renamed from Category)
   - Click gear to right to set label, click Update
 - Summary
@@ -192,9 +204,9 @@ Admin UI Screenshots:
 - [Teaser display config](images/digital-heritage-teaser-display-config.png)
 
 ## Digital Heritage Full Display
-Browse to Digital Heritage item on the Browse page and click to it
-
-Click the Item Menu, then click Manage display
+Browse to Digital Heritage item on the Browse page and click to view it. Click
+the Item Menu, then click Manage display. Alternatively go to Admin > Structure
+> Content Types > Digital Heritage > Manage display and click "Full display".
 
 Display customizations:
 - Information below item images:
@@ -215,20 +227,18 @@ Display customizations:
   - Community
   - Protocol
 
-Had to increase PHP config `max_input_vars` from 1000 for customizing "Category"
-display as "Topic". Set the value to 2048 and then the change succeeded
-
 Admin UI Screenshot:
 - [Full content display
   config](images/digital-heritage-full-content-display-config.png)
 
 ## Allowed HTML Elements
 The allowed HTML elements within user-written and imported content may be
-customized.
+customized. For now, we've only added `<hr>` to the "Full HTML" list of allowed
+tags.
 
 Admin Menu > Configuration > Content authoring > Text formats
 
-Click "configure" to the right of "Filtered HTML" or "Full HTML"
+Click "configure" to the right of "Full HTML"
 
 Scroll down to "Allowed HTML tags" and modify the space-separated list as
 desired.
@@ -236,13 +246,20 @@ desired.
 Click "Save configuration"
 
 ## Add Customizable Footer
-Admin UI > Structure > Blocks
+Go to Admin > Structure > Blocks
+
+**Delete and recreate Custom Site Footer**
+
+After the Mukurtu 3.0 update, the "Site custom footer" block had to deleted as
+it wasn't providing an input for HTML. After deleting, click "Add box" on
+Structure > Blocks page and set name and options as below.
 
 Change "Custom site footer" to display in the Footer region
 
 Click "configure" to the right
-- Set the desired "Text format" to allow the HTML elements you'd like to use
-- Enter the content you'd like to display in the footer
+- Set the desired "Text format" to Full HTML
+- Enter the content you'd like to display in the footer. Can be copied from
+  another instance of the site
 - Click "Advanced Settings" and enter any custom CSS classes you'd like applied
 - Click "Save block"
 
@@ -283,8 +300,23 @@ Started Guide".
 
 Scroll down and click "Save blocks". Now close the admin UI.
 
-### Mukurtu 2.1.8+
-Mukurtu no longer seems to handle the customization of the search form itself
+### Mukurtu versions except 2.1.8
+Mouse over the search form near the top of the page and click the gear in the
+upper right corner. Click "Edit view".
+
+Under "Pane Settings", click the link to the right of "Use panel path". Change
+the value to "No" and click "Apply".
+
+Click "Advanced" on the right to open more settings. Click the link to the right
+of "Link display". Click the radio next to "Custom URL" and enter
+"/digital-heritage" in the input. Click "Apply (all displays)".
+
+Click "Save".
+
+Searches should know work from anywhere on the site
+
+### Mukurtu 2.1.8
+Mukurtu wasn't able to handle the customization of the search form itself
 via the Admin Menu and had to be handled via the code for this view.
 
 If the view has been customized via the Admin Menu in the past, it should be
@@ -344,18 +376,14 @@ value `/digital-heritage` were the settings tried.
   /* /Custom site-wide nav search fix */
 ```
 
-### Mukurtu Before 2.1.8
-Mouse over the search form near the top of the page and click the gear in the
-upper right corner. Click "Edit view".
-
-Under "Pane Settings", click the link to the right of "Use panel path". Change
-the value to "No" and click "Apply".
-
-Click "Advanced" on the right to open more settings. Click the link to the right
-of "Link display". Click the radio next to "Custom URL" and enter
-"/digital-heritage" in the input. Click "Apply (all displays)".
-
-Click "Save".
-
-Searches should know work from anywhere on the site
+## Customize home page contents
+- Reference: https://mukurtu.org/support/configuring-front-page-content-blocks/
+- View Admin > Structure > Context; Click `mukurtu_theme-front_page` > Edit
+  - Click Theme and check the box next to the Genoa theme
+  - Click Blocks
+    - Click the x's next to existing content in the middle column
+    - In the right column click MUKURTU_THEME_BLOCKS and check Mukurtu Theme Frontpage Hero Image, then click "+ Add" to the right of "Top Bar"
+    - In the right column click System and check Main page content, then click "+ Add" to the right of "Content"
+    - In the right column click View: Browse Digital Heritage by Category, then click "+ Add" to the right of "Content"
+    - Click Save
 
