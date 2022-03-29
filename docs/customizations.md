@@ -185,7 +185,7 @@ These are the display formats we're customizing:
 with the following field settings:
 - Disable Mukurtu Mobile Sync even though field may say it is hidden
 - Topic (renamed from Category)
-  - Click gear to right to set label, click Update
+  - Click gear to right to set label, uncheck "Link to term", click Update
 - Summary
 - Tribe(s) (renamed from Tribal Affiliation)
   - Label: Inline
@@ -212,20 +212,22 @@ Display customizations:
 - Information below item images:
   - Summary
   - Description
-  - Image Identifier (renamed from Identifier)
-  - Citation
+  - Identifier (renamed from Image Identifier)
+  - Citation--make sure this is "Default" rather than "Services Raw" format
 - Information in right-hand panel:
   - Original Date
   - Topic (renamed from Category)
-  - Tribe(s) (renamed from Tribal Affiliation)
+  - Tribe(s) (renamed from Tribal Affiliation)--make sure this is "Separated" rather than "Rendered Entity" format
   - People
-  - Places (renamed from Location Description]
+  - Places (renamed from Location Description)
   - Format
   - Type
 - Disabled:
   - Author
   - Community
   - Protocol
+  - Keywords
+  - Language
 
 Admin UI Screenshot:
 - [Full content display
@@ -385,5 +387,9 @@ value `/digital-heritage` were the settings tried.
     - In the right column click MUKURTU_THEME_BLOCKS and check Mukurtu Theme Frontpage Hero Image, then click "+ Add" to the right of "Top Bar"
     - In the right column click System and check Main page content, then click "+ Add" to the right of "Content"
     - In the right column click View: Browse Digital Heritage by Category, then click "+ Add" to the right of "Content"
+    - Click Save
+- On home page, near bottom
+    - Click gear at top right of category boxes
+    - Change Title to "Browse by Topic" (rather than "Browse by Category")
     - Click Save
 
