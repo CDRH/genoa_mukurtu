@@ -20,6 +20,7 @@
 - [Image Download Links](#image-download-links)
 - [Add Site-wide Search](#add-site-wide-search)
 - [Customize home page contents](#customize-home-page-contents)
+- [CSS Changes](#css-changes)
 
 ## Account Registration
 Admin Menu > Configuration > People > Account settings
@@ -387,3 +388,9 @@ value `/digital-heritage` were the settings tried.
     - In the right column click View: Browse Digital Heritage by Category, then click "+ Add" to the right of "Content"
     - Click Save
 
+## CSS changes
+This CSS change addresses an issue that comes up with the upgrade to Mukurtu 3.0.2. This is a temporary fix that should be revisited once Mukurtu 4 is released. 
+
+To remove the "Last changed" text that appears on taxonomy term pages, edit
+`(path to site)/master/sites/all/themes/genoa/genoa.css`: 
+add `.meta.changed` to `{display: none}` list at line 12739 (make sure to add comma to preceding class)
