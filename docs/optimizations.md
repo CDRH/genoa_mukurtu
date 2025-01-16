@@ -1,12 +1,5 @@
 # Drupal and Mukurtu Optimizations
 
-- [Page Caching and CSS/JS Aggregation](#page-caching-and-css-js-aggregation)
-- [PHP](#php)
-  - [APC Settings](#apc-settings)
-  - [realpath_cache](#realpath_cache)
-  - [Zend OPcache](#zend-opcache)
-- [Further Research](#further-research)
-
 Packages for install have already been integrated into [Mukurtu install
 documentation](https://github.com/CDRH/CDRH-General/wiki/Mukurtu).
 
@@ -33,6 +26,60 @@ Set "Expiration of cached pages" to 1 day
 Check all the boxes here
 
 These changes provide a noticeable performance improvement for guest viewing!
+
+## dblog Module
+
+This module was previously known as "watchdog" and its database table is still
+named that. It is enabled by default to capture all website logging.
+
+### Empty Bloated DB Table
+
+Our production Mukurtu site was generating so many deprecation warnings etc
+that it filled our `/var/lib/mysql` partition for MariaDB and prevented the
+database from starting. Greg was able to recover enough disk space from the
+partition by removing some old backup files to get MariaDB to start. Running
+`drush cc all` afterwards was able to recover more disk space to buy time for
+attempts at remediation. Attempting to empty the table by
+`drush watchdog:delete all` were unsuccessful and started causing a MariaDB file
+`/var/lib/mysql/ibdata1` to start growing quickly. Research indicated it's not
+possible to regain storage used by this file without deleting and reimporting
+all database tables, so this process was cancelled before it completely filled
+the partition again. Reading the code found that internally this uses the
+`TRUNCATE` command which is supposed to be the most efficient way to empty a
+database table and reset its autoincrement value. But with this approach
+seeming like a recipe for disastar that would re-fill the table, other options
+were researched. It was found that re-creating the table anew with a different
+name, renaming the original, and then renaming the new table with the original's
+name would work. This approach worked, and deleting the large table after the
+new one was in place recovered the disk storage.
+
+Retrieve the SQL to re-create the watchdog table.
+Copy the output and enter with a different table name, `watchdognew`.
+Rename the tables. Then drop the old table.
+
+```mysql
+SHOW CREATE TABLE watchdog;
+
+CREATE TABLE watchdognew ...
+
+RENAME TABLE watchdog TO watchdogold, watchdognew TO watchdog;
+
+DROP TABLE watchdogold;
+```
+
+Now the dblog module and the "watchdog" table can be used again. The cron
+maintenance task will clear the table down to an amount configured on the admin
+page "Configuration > Development > Logging and errors",
+i.e. `/admin/config/development/logging` again as well. This had failed while
+the table was enormous.
+
+### Disable dblog Module
+
+To save the extra storage wear and CPU cycles, the dblog module can be disabled
+until needed to actually debug errors etc.
+
+Go to the admin page "Modules", i.e. `/admin/modules`, search for "log",
+toggle off the "dblog" module, and click Save in the lower left.
 
 ## PHP
 
