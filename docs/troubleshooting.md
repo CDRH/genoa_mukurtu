@@ -1,9 +1,27 @@
 
 A couple initial things to try when troubleshooting Mukurtu are restarting
 Apache and running `drush cc all`. Beyond that, one must look for hints in
-Apache logs and in output from the dblog module with `drush watchdog:show`.
+Apache logs and in output from the dblog module (after temporarily enabled)
+with `drush watchdog:show`.
 
 ## Search API Facet Errors
+
+### Verified Quick Fix
+
+After the production site had a content update push, this problem returned.
+The following steps fixed the problem:
+- Visit the `/admin/modules` page
+  - Search for "dblog"
+  - Enable the dblog module
+  - Click "Save configuration"
+- Visit the `/admin/config/search/search_api/index/default_node_index/facets` page
+  - There should be no error and now item pages should work
+- Return to the `/admin/modules` page
+  - Search for "dblog"
+  - Disable the dblog module
+  - Click "Save configuration"
+
+### Search API Facet Error History
 
 Soon after we had disabled the dblog module, we saw errors on any page
 interacting with items from the database. After re-enabling the dblog module,
