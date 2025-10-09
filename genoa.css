@@ -12735,7 +12735,8 @@ Hide Items
 
 .region-header .views-exposed-widgets .views-reset-button, /* Hide Reset button in nav search */
 .digital-heritage-body .group-480-thumbnail-and-link + div, /* Hide Image Metadata button */
-.contextual-links-region .views-reset-button /* Hide site-wide search reset button on all but results page */
+.contextual-links-region .views-reset-button, /* Hide site-wide search reset button on all but results page */
+.meta.changed /* Removed "Last changed" text on taxonomy term pages */
 {
   display: none;
 }
@@ -12768,7 +12769,6 @@ Hide Items
 }
 
 @media (min-width: 992px) {
-  
   .large-teaser-box .field-name-node-link a {
     background-image: none;
   }
