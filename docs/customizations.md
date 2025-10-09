@@ -198,17 +198,13 @@ with the following field settings:
 - Remove Community
   - Display: Disabled
 
-Admin UI Screenshots:
-- [Search result display
-  config](images/digital-heritage-search-result-display-config.png)
-- [Teaser display config](images/digital-heritage-teaser-display-config.png)
-
 ## Digital Heritage Full Display
 Admin > Structure > Content Types > Digital Heritage > Manage display
 and click "Full content".
 
 Display customizations:
 - Left:
+    Media Assets
   - Summary
   - Description
   - Cultural Narrative
@@ -216,16 +212,18 @@ Display customizations:
   - Transcription
     - Transcription
   - Location
+  - Identifier (previously renamed from Image Identifier)
   - Citation
   - Related Content
-  - Identifier (previously renamed from Image Identifier)
 - Right:
+  - Original Date
+  - Topic (renamed from Category)
+  - Tribe(s) (renamed from Tribal Affiliation)
   - People
   - Places (renamed from Location Description]
-  - Tribe(s) (renamed from Tribal Affiliation)
-  - Topic (renamed from Category)
+  - Format
+  - Type
   - Collections
-  - Original Date
   - Title (Original: Community Record Title)
   - Original Date Description
   - Related Items
@@ -238,8 +236,6 @@ Display customizations:
   - External Links
   - Publisher
   - Subject
-  - Type
-  - Format
 - Bottom:
   - Comments
 - Disabled: (other fields as well, but below were disabled from above)
@@ -251,10 +247,6 @@ Display customizations:
   - Community
   - Protocol
   - Language
-
-Admin UI Screenshot:
-- [Full content display
-  config](images/digital-heritage-full-content-display-config.png)
 
 ## Allowed HTML Elements
 The allowed HTML elements within user-written and imported content may be
