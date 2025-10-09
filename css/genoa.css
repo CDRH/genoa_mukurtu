@@ -12735,7 +12735,42 @@ Hide Items
 
 .region-header .views-exposed-widgets .views-reset-button, /* Hide Reset button in nav search */
 .digital-heritage-body .group-480-thumbnail-and-link + div, /* Hide Image Metadata button */
-.contextual-links-region .views-reset-button /* Hide site-wide search reset button on all but results page */
+.contextual-links-region .views-reset-button, /* Hide site-wide search reset button on all but results page */
+.meta.changed /* Removed "Last changed" text on taxonomy term pages */
 {
   display: none;
+}
+
+/* Hiding most Chevrons, those left are commented out on top */
+
+/* .panel-panel .pane-title // all side panel chevrons */
+
+.pane-views-ee32d6a0eefea96d62828df6beda043f .pane-title,
+.pane-ma-search-api-ma-custom-sorts .pane-title,
+.image-grid .views-field-name,
+.view-mode-taxonomy_record_teaser .field-name-t,
+.node-dictionary-word.view-mode-dictionary_word_summary .field-name-field-word-entry div.paragraphs-item-dictionary-word-bundle .field-name-field-alternate-spelling,
+.view-community-dh-items .views-row,
+.top-bottom-image-title .field-name-taxonomy-title-browse-link h3,
+.image-grid .views-field-name,
+.grid-view .view-mode-search_result .field-name-title h2, /* arrows to right of title in grid view */
+.thumbnail-on-link .views-field-name,
+.item-grid-view .field-name-title h2,
+.node-personal-collection.view-mode-full .field-name-field-digital-heritage-items .view-mode-search_result .field-name-title h2,
+.node-word-list.view-mode-full .field-name-field-digital-heritage-items .view-mode-search_result .field-name-title h2,
+.node-collection.view-mode-full .field-name-field-digital-heritage-items .view-mode-search_result .field-name-title h2,
+.node-cultural-protocol-group.view-mode-full .metadata-wrapper .field-name-community-membership-status,
+.node-community.view-mode-full .metadata-wrapper .field-name-community-membership-status,
+.bean-hero-image-one-column .field-name-field-hero-image-caption .field-item,
+.large-hero .hero-text,
+#homebox.homebox-mukurtu_subtheme_dashboard .portlet-header .portlet-title
+{
+  background-image: none !important;
+}
+
+@media (min-width: 992px) {
+
+  .large-teaser-box .field-name-node-link a {
+    background-image: none;
+  }
 }

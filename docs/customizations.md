@@ -1,27 +1,5 @@
 # Mukurtu Customizations for Genoa
 
-**Contents**
-- [Account Registration](#account-registration)
-- [Disable Comments](#disable-comments)
-  - [New Content](#new-content)
-  - [All Existing Nodes](#all-existing-nodes)
-- [Digital Heritage Browse Facets](#digital-heritage-browse-facets)
-  - [Index a Field for Faceting](#index-a-field-for-faceting)
-  - [Enable a Facet Field](#enable-a-facet-field)
-  - [Customize Browse Facets via Admin UI](#customize-browse-facets-via-admin-ui)
-  - [Deprecated Facet Customization](#deprecated-facet-customization)
-    - [Completely Disable Search Facets](#completely-disable-search-facets)
-    - [Disable on This Page Only](#disable-on-this-page-only)
-    - [Add Facet Field to Page](#add-facet-field-to-page)
-- [Digital Heritage Preview Displays](#digital-heritage-preview-displays)
-- [Digital Heritage Full Display](#digital-heritage-full-display)
-- [Allowed HTML Elements](#allowed-html-elements)
-- [Add Customizable Footer](#add-customizable-footer)
-- [Image Download Links](#image-download-links)
-- [Add Site-wide Search](#add-site-wide-search)
-- [Customize home page contents](#customize-home-page-contents)
-- [CSS Changes](#css-changes)
-
 ## Account Registration
 Admin Menu > Configuration > People > Account settings
 
@@ -31,7 +9,7 @@ Set to "Administrators only"
 
 Click "Save configuration"
 
-Users cant still request a new password for recovery
+Users can still request a new password for recovery
 
 ## Disable Comments
 
@@ -90,6 +68,13 @@ Admin Menu > Configuration > Search and metadata > Search API
 Click the drop-down arrow right of the Edit button for "Default node index" and
 click Fields
 
+Add / ensure these Fields (and Machine Names) are checked for facet index:
+- Category (field_category)
+- Format (field_format)
+  - Format » Name (field_format:name)
+- Type (field_dh_type)
+- Tribal Affiliation (field_unl_tribal_affiliation)
+
 Check the box next to the field with which you'd like to index, scroll to the
 bottom, and click Save Configuration
 
@@ -106,6 +91,13 @@ Admin Menu > Configuration > Search and metadata > Search API
 Click the drop-down arrow right of the Edit button for "Default node index" and
 click Facets
 
+Add / ensure these Fields (and Machine Names) are checked for facet index:
+- Category (There are two now; click the one with `field_category` near the end
+  of the URL for its "configure display" link on the right)
+- Format (field_format); not "Format » Name"
+- Type (field_dh_type)
+- Tribal Affiliation (field_unl_tribal_affiliation)
+
 Check the box next to the field with which you'd like to facet, scroll to the
 bottom, and click Save Configuration
 
@@ -116,12 +108,23 @@ Scroll to the facet you just enabled and click "Configure display"
 
 ### Customize Browse Facets via Admin UI
 Sign in, click "Browse" (redirects to `/digital-heritage` path), click gear in
-far upper right of page content, click "Edit Panel".
+far upper right of page content but below "Government records show that ",
+click "Edit Panel".
 
-The UI elements under "Left" are what display in the browse page's facets. Click
-the gear left of "Left" to add content. Click and drag to re-order facets. Click
-the gears right of the facets' names to customize labels, remove, etc. Click
-"Update and Save" awkwardly placed on the right to save changes here.
+The UI elements under "Left" are what display in the browse page's facets.
+
+Add / ensure these items are present under Left:
+- Exposed form: digital_heritage_grid_list-all
+- Custom sorts for the browse pages
+- Facet API: Search service: Default node index: Category
+- Facet API: Search service: Default node index: Tribal Affiliation
+- Facet API: Search service: Default node index: Format
+- Facet API: Search service: Default node index: Type
+
+Click the gear left of "Left" to add content. Click and drag to re-order facets.
+Click the gears right of the facets' names to customize labels, remove, etc.
+Remove any named "Deleted/missing block facetapi-..." from old customization.
+Click "Update and Save" awkwardly placed on the right to save changes here.
 
 Changes via the admin UI here will override changes to the file
 `ma_digitalheritage.pages_default.inc` in stricken documentation below.
@@ -174,14 +177,10 @@ Digital Heritage browse page
 ## Digital Heritage Preview Displays
 
 These are the display formats we're customizing:
-- Search result highlighting input
-  - Hover over an item on the Digital Heritage Browse page, click the gear,
-    click "Manage display"
-- Teaser
-  - Hover over an item on a page such as `/tags/parents-and-siblings`, click the
-    gear, click "Manage display"
-- Alternatively go to Admin > Structure > Content Types > Digital Heritage >
-  Manage display and click "Search result highlighting input" or "Teaser"
+- Admin > Structure > Content Types > Digital Heritage >
+  Manage display
+  - Search result highlighting input
+  - Teaser
 
 with the following field settings:
 - Disable Mukurtu Mobile Sync even though field may say it is hidden
@@ -205,28 +204,53 @@ Admin UI Screenshots:
 - [Teaser display config](images/digital-heritage-teaser-display-config.png)
 
 ## Digital Heritage Full Display
-Browse to Digital Heritage item on the Browse page and click to view it. Click
-the Item Menu, then click Manage display. Alternatively go to Admin > Structure
-> Content Types > Digital Heritage > Manage display and click "Full display".
+Admin > Structure > Content Types > Digital Heritage > Manage display
+and click "Full content".
 
 Display customizations:
-- Information below item images:
+- Left:
   - Summary
   - Description
-  - Image Identifier (renamed from Identifier)
+  - Cultural Narrative
+  - Traditional Knowledge
+  - Transcription
+    - Transcription
+  - Location
   - Citation
-- Information in right-hand panel:
-  - Original Date
-  - Topic (renamed from Category)
-  - Tribe(s) (renamed from Tribal Affiliation)
+  - Related Content
+  - Identifier (previously renamed from Image Identifier)
+- Right:
   - People
   - Places (renamed from Location Description]
-  - Format
+  - Tribe(s) (renamed from Tribal Affiliation)
+  - Topic (renamed from Category)
+  - Collections
+  - Original Date
+  - Title (Original: Community Record Title)
+  - Original Date Description
+  - Related Items
+  - Creator
+  - Contributor
+  - Rights
+  - Traditional Knowledge Labels
+  - Licensing Options
+  - Source
+  - External Links
+  - Publisher
+  - Subject
   - Type
-- Disabled:
+  - Format
+- Bottom:
+  - Comments
+- Disabled: (other fields as well, but below were disabled from above)
+  - Mukurtu Mobile Sync
+  - Title
+  - Links
   - Author
+  - Keywords
   - Community
   - Protocol
+  - Language
 
 Admin UI Screenshot:
 - [Full content display

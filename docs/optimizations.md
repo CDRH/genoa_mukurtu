@@ -1,8 +1,5 @@
 # Drupal and Mukurtu Optimizations
 
-Packages for install have already been integrated into [Mukurtu install
-documentation](https://github.com/CDRH/CDRH-General/wiki/Mukurtu).
-
 View execution time and memory usage for each page load:<br>
 Admin Menu > Configuration > Development > Devel settings
 
@@ -57,7 +54,9 @@ Retrieve the SQL to re-create the watchdog table.
 Copy the output and enter with a different table name, `watchdognew`.
 Rename the tables. Then drop the old table.
 
-```mysql
+```sql
+USE genoa;
+
 SHOW CREATE TABLE watchdog;
 
 CREATE TABLE watchdognew ...
@@ -80,6 +79,51 @@ until needed to actually debug errors etc.
 
 Go to the admin page "Modules", i.e. `/admin/modules`, search for "log",
 toggle off the "dblog" module, and click Save in the lower left.
+
+## Prevent 404 console / log spam
+
+```bash
+cd /var/local/www/mukurtu/(site)
+mkdir master/sites/all/modules/custom/features/ma_core/js
+echo '// Empty file to prevent 404 log / console bloat' \
+  > master/sites/all/modules/custom/features/ma_core/js/bootstrap_tooltips_over_select2_widget.js
+
+mkdir master/sites/all/themes/bootstrap/fonts
+echo ' ' > master/sites/all/themes/bootstrap/fonts/glyphicons-halflings-regular.ttf
+```
+
+## Restrict entity_delete_log
+
+`/admin/config/system/entity-delete-log`
+
+De-select all record types except User records for logging deletion and click
+Save.
+
+We aren't using audit logs of records deleted. Over the course of a few years
+this table had grown to take up as much space as the rest of the database.
+
+To empty the table completely, run this command:
+
+```sql
+USE genoa;
+
+DELETE FROM entity_delete_log;
+```
+
+## Remove DHAN Node Records
+
+There are extraneous content items of type Digital Heritage Admin Notification.
+They are automatically created for every item uploaded and imported, effectively
+doubling the number of node records in the database.
+
+These can be removed via SQL to reduce noise in browsing content in the site
+and possibly have a minor speed benefit to accessing uploaded item node records.
+
+```sql
+USE genoa;
+
+DELETE FROM node WHERE type='dhan';
+```
 
 ## PHP
 
